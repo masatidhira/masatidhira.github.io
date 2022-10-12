@@ -6,8 +6,14 @@ import styled from "styled-components"
 const Header = () => {
     return (
         <Container>
-            <LeftLink to="/">PROFILE</LeftLink>
-            <RightLink to="/project">PROJECT</RightLink>
+            <LeftLink to="/">
+                <P>HO</P>
+                <P>ME</P>
+            </LeftLink>
+            <RightLink to="/project">
+                <P>PRO</P>
+                <P>JECT</P>
+            </RightLink>
         </Container>
     );
 }
@@ -26,7 +32,9 @@ const HeaderLink = styled(Link)`
     top: 4vw;
     color: #000;
     text-decoration: none;
-    font-size: 14px;
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
 `
 
 const LeftLink = styled(HeaderLink)`
@@ -37,5 +45,8 @@ const RightLink = styled(HeaderLink)`
     right: 4vw;
 `
 
+const P = styled.p`
+    font-size: 14px;
+`
 
 export default Header;

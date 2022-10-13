@@ -7,12 +7,27 @@ const Header = () => {
     return (
         <Container>
             <LeftLink to="/">
-                <P>HO</P>
-                <P>ME</P>
+                <P>
+                    <span>H</span>
+                    <span>O</span>
+                </P>
+                <P>
+                    <span>M</span>
+                    <span>E</span>
+                </P>
             </LeftLink>
             <RightLink to="/project">
-                <P>PRO</P>
-                <P>JECT</P>
+                <P>
+                    <span>P</span>
+                    <span>R</span>
+                    <span>O</span>
+                </P>
+                <P>
+                    <span>J</span>
+                    <span>E</span>
+                    <span>C</span>
+                    <span>T</span>
+                </P>
             </RightLink>
         </Container>
     );
@@ -27,14 +42,19 @@ const Container = styled.header`
     display: flex;
     z-index: 100;
 `
+
 const HeaderLink = styled(Link)`
     position: fixed;
     top: 4vw;
     color: #000;
     text-decoration: none;
-    background-color: blueviolet;
+    min-width: 2ch;
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 375px) {
+        min-width: 2.5ch;
+    }
 `
 
 const LeftLink = styled(HeaderLink)`
@@ -45,8 +65,16 @@ const RightLink = styled(HeaderLink)`
     right: 4vw;
 `
 
-const P = styled.p`
-    font-size: 14px;
+export const P = styled.p`
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: space-between;
+
+    @media (min-width: 375px) {
+        font-size: 12px;
+    }
 `
 
 export default Header;

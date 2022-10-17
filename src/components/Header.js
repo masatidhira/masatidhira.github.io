@@ -1,41 +1,40 @@
 import React from "react"
 import {Link} from "react-router-dom"
-import styled from "styled-components"
+import styled, { css } from "styled-components/macro"
 
 
 const Header = () => {
     return (
-        <Container>
-            <LeftLink to="/">
-                <P>
+        <Container css={baseContainer}>
+            <LeftLink to="/" css={baseNavButton}>
+                <p>
                     <span>H</span>
                     <span>O</span>
-                </P>
-                <P>
+                </p>
+                <p>
                     <span>M</span>
                     <span>E</span>
-                </P>
+                </p>
             </LeftLink>
-            <RightLink to="/project">
-                <P>
+            <RightLink to="/project" css={baseNavButton}>
+                <p>
                     <span>P</span>
                     <span>R</span>
                     <span>O</span>
-                </P>
-                <P>
+                </p>
+                <p>
                     <span>J</span>
                     <span>E</span>
                     <span>C</span>
                     <span>T</span>
-                </P>
+                </p>
             </RightLink>
         </Container>
     );
 }
 
-const Container = styled.header`
+export const baseContainer = css`
     position: absolute;
-    top: 0;
     left: 0;
     width: 100vw;
     height: auto;
@@ -43,18 +42,37 @@ const Container = styled.header`
     z-index: 100;
 `
 
-const HeaderLink = styled(Link)`
+export const baseNavButton = css`
     position: fixed;
-    top: 4vw;
-    color: #000;
+    color: black;
     text-decoration: none;
     min-width: 2ch;
     display: flex;
     flex-direction: column;
 
+    p {
+        font-size: 10px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: space-between;
+    }
+
     @media (min-width: 375px) {
         min-width: 2.5ch;
+
+        p {
+            font-size: 12px;
+        }
     }
+`
+
+const Container = styled.header`
+    top: 0;
+`
+
+const HeaderLink = styled(Link)`
+    top: 4vw;
 `
 
 const LeftLink = styled(HeaderLink)`
@@ -63,18 +81,6 @@ const LeftLink = styled(HeaderLink)`
 
 const RightLink = styled(HeaderLink)`
     right: 4vw;
-`
-
-export const P = styled.p`
-    font-size: 10px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: space-between;
-
-    @media (min-width: 375px) {
-        font-size: 12px;
-    }
 `
 
 export default Header;

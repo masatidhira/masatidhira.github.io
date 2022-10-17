@@ -1,61 +1,57 @@
 import React from "react"
-import styled from "styled-components"
-import { P } from "./Header"
+import styled, { css } from "styled-components/macro"
+import { Link } from "react-router-dom"
+import { baseContainer, baseNavButton } from "./Header"
 
 
 const Footer = () => {
     return (
-        <Container>
-            <Email>
-                <P>
+        <Container css={baseContainer}>
+            <Email 
+                to="#"
+                onClick={(e) => {
+                    window.location.href = "mailto: masatidhira@gmail.com";
+                    e.preventDefault();
+                }}
+                css={baseNavButton}
+            >
+                <p>
                     <span>E</span>
                     <span>M</span>
                     <span>A</span>
-                </P>
-                <P>
+                </p>
+                <p>
                     <span>I</span>
                     <span>L</span>
-                </P>
+                </p>
             </Email>
-            <Credit>
-                <P>
+            <Credit css={baseNavButton}>
+                <p>
                     <span>2</span>
                     <span>0</span>
-                </P>
-                <P>
+                </p>
+                <p>
                     <span>2</span>
                     <span>2</span>
-                </P>
+                </p>
             </Credit>
         </Container>
     );
 }
 
+
 const Container = styled.footer`
-    position: absolute;
     bottom: 0;
-    left: 0;
-    width: 100vw;
-    height: auto;
-    display: flex;
-    z-index: 100;
 `
 
-const Email = styled.div`
-    position: fixed;
+const Email = styled(Link)`
     bottom: 4vw;
     left: 4vw;
-    color: #000;
-    min-width: 2ch;
-
-    @media (min-width: 375px) {
-        min-width: 2.5ch;
-    }
 `
 
-const Credit = styled(Email)`
+const Credit = styled.div`
+    bottom: 4vw;
     right: 4vw;
-    left: unset;
 `
 
 export default Footer;

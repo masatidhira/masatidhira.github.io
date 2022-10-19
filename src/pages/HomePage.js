@@ -33,7 +33,6 @@ const HomePage = () => {
 const Container = styled.div`
     min-height: 100vh;
     width: 100vw;
-    background-color: #eee;
     padding: 0 4vw;
 `
 

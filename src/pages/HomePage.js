@@ -16,12 +16,15 @@ const HomePage = () => {
                         <span>ATIDHIRA</span>
                         <span>HABIBILLAH</span>
                     </h2>
-                    <ScrollIcon>scroll down</ScrollIcon>
                 </Banner>
-                <ScrollIcon></ScrollIcon>
+                <ScrollIcon>scroll down</ScrollIcon>
             </BannerContainer>
             <BioContainer>
-                BIODATA
+                <p>Hello!</p>
+                <p>
+                    My name is Atidhira Habibillah, a self-taught programmer who focuses on website development.
+                </p>
+                
             </BioContainer>
         </Container>
     )
@@ -32,11 +35,12 @@ const Container = styled.div`
     width: 100vw;
     background-color: #eee;
     padding: 0 4vw;
-`;
+`
 
 const BannerContainer = styled.section`
     width: 100%;
     height: 100vh;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,7 +50,6 @@ const BannerContainer = styled.section`
 
 const Banner = styled.div`
     width: 100%;
-    position: relative;
     display: flex;
     flex-direction: column;
     
@@ -56,6 +59,7 @@ const Banner = styled.div`
         width: 100%;
         margin: 2rem 0;
         line-height: 2.5rem;
+        letter-spacing: 2px;
     }
 
     h1 {
@@ -68,8 +72,10 @@ const Banner = styled.div`
 `
 
 const BannerImage = styled.div`
-    width: 70vw;
+    width: 65vw;
     height: 40vw;
+    max-width: 325px;
+    max-height: 200px;
     background-color: royalblue;
 `
 
@@ -85,11 +91,9 @@ const ScrollIcon = styled.div`
 
 const BioContainer = styled.div`
     width: 100%;
-    height: 100vh;
-    background-color: green;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+    padding: 2.5rem 0;
+
 `
 
 export default HomePage;

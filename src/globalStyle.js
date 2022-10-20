@@ -1,7 +1,8 @@
 import {createGlobalStyle} from "styled-components"
 import montserratMedium from "./fonts/Montserrat/Montserrat-Medium.ttf"
 import montserratReguler from "./fonts/Montserrat/Montserrat-Regular.ttf"
-import montserratThin from "./fonts/Montserrat/Montserrat-Thin.ttf"
+import brushFlower from "./fonts/Brush-Flower/Brush-Flower.otf"
+import itRemark from "./fonts/lt-remark/LT-Remark-Bold-Italic.otf"
 
 
 const GlobalStyle = createGlobalStyle`
@@ -16,15 +17,19 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
-        font-family: "MontserratThin";
-        src: local("MontserratThin"), url(${montserratThin}) format("truetype");
+        font-family: "BrushFlower";
+        src: local("BrushFlower"), url(${brushFlower}) format("opentype");
+    }
+
+    @font-face {
+        font-family: "ItRemark";
+        src: local("ItRemark"), url(${itRemark}) format("opentype");
     }
 
     * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        font-family: "MontserratReguler" ,sans-serif;
     }
 
     :root {

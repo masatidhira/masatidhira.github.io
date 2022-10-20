@@ -13,8 +13,8 @@ const HomePage = () => {
                     </h1>
                     <BannerImage></BannerImage>
                     <h2>
-                        <span>ATIDHIRA</span>
-                        <span>HABIBILLAH</span>
+                        <span>Atidhira</span>
+                        <span>Habibillah</span>
                     </h2>
                 </Banner>
                 <ScrollIcon>scroll down</ScrollIcon>
@@ -22,7 +22,16 @@ const HomePage = () => {
             <BioContainer>
                 <p>Hello!</p>
                 <p>
-                    My name is Atidhira Habibillah, a self-taught programmer who focuses on website development.
+                    My name is Atidhira Habibillah, an Informatic Engineering student from Indonesia.
+                </p>
+                <p>
+                    I love to code. I've start my journey of learning to code since 2021, but i can't say that i'm an expert yet, i still have a lot of things to learn. 
+                </p>
+                <p>
+                    My dream is to become a website developer and front-end engineer and win an award for website i'have created. 
+                </p>
+                <p>
+                    If you need my help, or just want to say hi, feel free to contact me :)
                 </p>
                 
             </BioContainer>
@@ -55,16 +64,22 @@ const Banner = styled.div`
         flex-direction: column;
         width: 100%;
         margin: 2rem 0;
+    }
+
+    h1 {
+        font-family: "ItRemark", serif !important;
+        font-size: 3rem;
         line-height: 2.5rem;
         letter-spacing: 2px;
     }
 
-    h1 {
-        font-size: 2rem;
-    }
-
     h2 {
+        font-family: "BrushFlower", sans-serif !important;
+        font-size: 1.7rem;
+        letter-spacing: 3px;
+        line-height: 3rem;
         text-align: right;
+        transform: rotate(-20deg);
     }
 `
 
@@ -89,8 +104,14 @@ const ScrollIcon = styled.div`
 const BioContainer = styled.div`
     width: 100%;
     min-height: 100vh;
-    padding: 2.5rem 0;
+    padding: 3rem var(--nav-margin);
 
+    p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
+        line-height: 1.2rem;
+        padding-bottom: 1rem;
+    }
 `
 
 export default HomePage;

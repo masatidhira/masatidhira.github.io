@@ -46,12 +46,13 @@ export const baseNavButton = css`
     position: fixed;
     color: var(--text-color-1);
     text-decoration: none;
-    min-width: 2ch;
+    min-width: 2.5ch;
     display: flex;
     flex-direction: column;
 
     p {
-        font-size: 10px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 12px;
         font-weight: bold;
         display: flex;
         justify-content: space-between;
@@ -59,10 +60,10 @@ export const baseNavButton = css`
     }
 
     @media (min-width: 375px) {
-        min-width: 2.5ch;
+        min-width: 3ch;
 
         p {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 `

@@ -36,7 +36,7 @@ const Header = () => {
 export const baseContainer = css`
     position: absolute;
     left: 0;
-    width: 100vw;
+    width: 100%;
     height: auto;
     display: flex;
     z-index: 100;
@@ -44,7 +44,7 @@ export const baseContainer = css`
 
 export const baseNavButton = css`
     position: fixed;
-    color: black;
+    color: var(--text-color-1);
     text-decoration: none;
     min-width: 2ch;
     display: flex;
@@ -72,15 +72,15 @@ const Container = styled.header`
 `
 
 const HeaderLink = styled(Link)`
-    top: 4vw;
+    top: var(--nav-margin);
 `
 
 const LeftLink = styled(HeaderLink)`
-    left: 4vw;
+    left: var(--nav-margin);
 `
 
 const RightLink = styled(HeaderLink)`
-    right: 4vw;
+    right: var(--nav-margin);
 `
 
 export default Header;

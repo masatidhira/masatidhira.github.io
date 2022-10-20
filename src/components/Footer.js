@@ -45,13 +45,13 @@ const Container = styled.footer`
 `
 
 const Email = styled(Link)`
-    bottom: 4vw;
-    left: 4vw;
+    bottom: var(--nav-margin);
+    left: var(--nav-margin);
 `
 
 const Credit = styled.div`
-    bottom: 4vw;
-    right: 4vw;
+    bottom: var(--nav-margin);
+    right: var(--nav-margin);
 `
 
 export default Footer;

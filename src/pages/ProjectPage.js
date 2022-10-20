@@ -11,8 +11,8 @@ const ProjectPage = () => {
 }
 
 const Container = styled.div`
+    width: 100%;
     min-height: 100vh;
-    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;

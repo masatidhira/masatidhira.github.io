@@ -32,19 +32,17 @@ const HomePage = () => {
 
 const Container = styled.div`
     min-height: 100vh;
-    width: 100vw;
-    padding: 0 4vw;
+    width: 100%;
 `
 
 const BannerContainer = styled.section`
-    width: 100%;
     height: 100vh;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin: 0 var(--nav-margin);
 `
 
 const Banner = styled.div`

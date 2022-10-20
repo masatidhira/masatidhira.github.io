@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e617dbb0a7d72cfdef01",
-    "url": "/static/js/main.e617dbb0.chunk.js"
+    "revision": "62481a612c53fb0c48a4",
+    "url": "/static/js/main.62481a61.chunk.js"
   },
   {
-    "revision": "ce157301e2e54a75c736",
-    "url": "/static/js/1.ce157301.chunk.js"
+    "revision": "64b8bc757237c9e3c37c",
+    "url": "/static/js/1.64b8bc75.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -24,11 +24,15 @@ self.__precacheManifest = [
     "url": "/static/media/Montserrat-Regular.3fe868a1.ttf"
   },
   {
-    "revision": "4b73d125bab54f94ed2510590c237f73",
-    "url": "/static/media/Montserrat-Thin.4b73d125.ttf"
+    "revision": "0614346ec4922361b7908926a005370d",
+    "url": "/static/media/Brush-Flower.0614346e.otf"
   },
   {
-    "revision": "92e77b3e143cefcbdb0f026eee8583f1",
+    "revision": "9546392290d661ddfb7eff8b0e533e38",
+    "url": "/static/media/LT-Remark-Bold-Italic.95463922.otf"
+  },
+  {
+    "revision": "00018b8d8a7085487ca299caa43916b8",
     "url": "/index.html"
   }
 ];

@@ -19,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: "BrushFlower";
         src: local("BrushFlower"), url(${brushFlower}) format("opentype");
+        font-weight: light;
     }
 
     @font-face {

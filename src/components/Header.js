@@ -52,7 +52,7 @@ export const baseNavButton = css`
 
     p {
         font-family: "Montserrat", sans-serif;
-        font-size: 12px;
+        font-size: 10px;
         font-weight: bold;
         display: flex;
         justify-content: space-between;
@@ -63,7 +63,7 @@ export const baseNavButton = css`
         min-width: 3ch;
 
         p {
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 `

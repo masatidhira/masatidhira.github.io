@@ -21,7 +21,7 @@ const HomePage = () => {
             </BannerSection>
             <BioSection>
                 <Profile>
-                    <p>Hello!</p>
+                    <h3>Hello!</h3>
                     <p>
                         My name is Atidhira Habibillah, currently a student of Informatic Engineering from Indonesia.
                     </p>
@@ -56,11 +56,11 @@ const HomePage = () => {
                 <Contact>
                     <h3>Get in touch</h3>
                     <ul>
-                        <li>Email</li>
-                        <li>LinkedIn</li>
-                        <li>Github</li>
-                        <li>Instagram</li>
-                        <li>Whatsapp</li>
+                        <li><a href="mailto:masatidhira@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/masatidhira98/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/masatidhira" target="_blank" rel="noopener noreferrer">Github</a></li>
+                        <li><a href="https://www.instagram.com/masatidhira/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=6281336284354" target="_blank" rel="noopener noreferrer">Whatsapp</a></li>
                     </ul>
                 </Contact>
             </BioSection>
@@ -138,11 +138,18 @@ const BioSection = styled.section`
 
 const Profile = styled.div`
     width: 100%;
-    p {
-        font-family: "Montserrat", sans-serif;
-        font-size: 12px;
+    h3, p {
         line-height: 1.2rem;
         padding-bottom: 1rem;
+    }
+
+    h3 {
+        font-family: "ItRemark", serif;
+    }
+
+    p {
+        font-family: "MontserratReguler", sans-serif;
+        font-size: 12px;
     }
 `
 

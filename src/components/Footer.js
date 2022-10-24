@@ -1,6 +1,5 @@
 import React from "react"
 import styled, { css } from "styled-components/macro"
-import { Link } from "react-router-dom"
 import { baseContainer, baseNavButton } from "./Header"
 
 
@@ -8,11 +7,7 @@ const Footer = () => {
     return (
         <Container css={baseContainer}>
             <Email 
-                to="#"
-                onClick={(e) => {
-                    window.location.href = "mailto: masatidhira@gmail.com";
-                    e.preventDefault();
-                }}
+                href="mailto:masatidhira@gmail.com"
                 css={baseNavButton}
             >
                 <p>
@@ -44,7 +39,7 @@ const Container = styled.footer`
     bottom: 0;
 `
 
-const Email = styled(Link)`
+const Email = styled.a`
     bottom: var(--nav-margin);
     left: var(--nav-margin);
 `

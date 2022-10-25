@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "e4c0039e3c4649adbd38",
-    "url": "/static/js/main.e4c0039e.chunk.js"
+    "revision": "ea32c04eb76ababcb45e",
+    "url": "/static/js/main.ea32c04e.chunk.js"
   },
   {
     "revision": "65fe0cec3053f97302b1",
@@ -32,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/LT-Remark-Bold-Italic.95463922.otf"
   },
   {
-    "revision": "67fad482e3ae6c8719183af0621df668",
+    "revision": "20e6d74d1c8510c236f3bde437ef6c9a",
     "url": "/index.html"
   }
 ];

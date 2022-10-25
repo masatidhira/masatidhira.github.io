@@ -1,9 +1,8 @@
-import {createGlobalStyle} from "styled-components"
-import montserratMedium from "./fonts/Montserrat/Montserrat-Medium.ttf"
-import montserratReguler from "./fonts/Montserrat/Montserrat-Regular.ttf"
-import brushFlower from "./fonts/Brush-Flower/Brush-Flower.otf"
-import itRemark from "./fonts/lt-remark/LT-Remark-Bold-Italic.otf"
-
+import { createGlobalStyle } from "styled-components";
+import montserratMedium from "./fonts/Montserrat/Montserrat-Medium.ttf";
+import montserratReguler from "./fonts/Montserrat/Montserrat-Regular.ttf";
+import brushFlower from "./fonts/Brush-Flower/Brush-Flower.otf";
+import itRemark from "./fonts/lt-remark/LT-Remark-Bold-Italic.otf";
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -37,6 +36,14 @@ const GlobalStyle = createGlobalStyle`
         --background-color: #111111;
         --text-color-1: #EEEEEE;
         --nav-margin: 7vw;
+
+        --font-heading: "ItRemark", serif;
+        --font-text-medium: "MontserratMedium", sans-serif;
+        --font-text-reguler: "MontserratReguler", sans-serif;
+        --font-latin: "BrushFlower", sans-serif;
+
+        --fs-reguler: 13px;
+        --fs-medium: 1.8rem;
     }
 
     a {
@@ -50,6 +57,6 @@ const GlobalStyle = createGlobalStyle`
         max-width: 100%;
         color: var(--text-color-1);
     }
-`
+`;
 
 export default GlobalStyle;

@@ -44,6 +44,10 @@ const GlobalStyle = createGlobalStyle`
 
         --fs-reguler: 13px;
         --fs-medium: 1.8rem;
+
+        --z-index-noise: 1;
+        --z-index-content: 2;
+        --z-index-nav: 100;
     }
 
     a {
@@ -51,11 +55,16 @@ const GlobalStyle = createGlobalStyle`
         color: var(--text-color-1);
     }
 
-
     #root {
         background: var(--background-color);
         max-width: 100%;
         color: var(--text-color-1);
+    }
+
+    .active-nav {
+        ::before {
+            width: 130%;
+        }
     }
 `;
 

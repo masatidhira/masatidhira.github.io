@@ -1,86 +1,71 @@
-import React from "react"
-import {Link} from "react-router-dom"
-import styled, { css } from "styled-components/macro"
+import React from "react";
+import styled, { css } from "styled-components/macro";
+import NavLink from "./NavLink";
 
 const Header = () => {
-    return (
-        <Container css={baseContainer}>
-            <LeftLink to="/" css={baseNavButton}>
-                <p>
-                    <span>H</span>
-                    <span>O</span>
-                </p>
-                <p>
-                    <span>M</span>
-                    <span>E</span>
-                </p>
-            </LeftLink>
-            <RightLink to="/project" css={baseNavButton}>
-                <p>
-                    <span>P</span>
-                    <span>R</span>
-                    <span>O</span>
-                </p>
-                <p>
-                    <span>J</span>
-                    <span>E</span>
-                    <span>C</span>
-                    <span>T</span>
-                </p>
-            </RightLink>
-        </Container>
-    );
-}
+  return (
+    <Container css={baseContainer}>
+      <NavLink to="/" label={["PRO", "FILE"]} pos="left" />
+      <NavLink to="/project" label={["PRO", "JECT"]} pos="right" />
+    </Container>
+  );
+};
 
 export const baseContainer = css`
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: auto;
-    display: flex;
-    z-index: 100;
-`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  z-index: var(--z-index-nav);
+`;
 
 export const baseNavButton = css`
-    position: fixed;
-    color: var(--text-color-1);
-    text-decoration: none;
-    min-width: 2.5ch;
+  position: fixed;
+  color: var(--text-color-1);
+  text-decoration: none;
+  min-width: 4ch;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+  }
 
+  ::before {
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: blue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(-2px);
+    opacity: 0.8;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+
+  &:hover {
+    ::before {
+      width: 130%;
+    }
+  }
+
+  @media (min-width: 375px) {
     p {
-        font-family: "Montserrat", sans-serif;
-        font-size: 10px;
-        font-weight: bold;
-        display: flex;
-        justify-content: space-between;
-        align-items: space-between;
+      font-size: 12px;
     }
-
-    @media (min-width: 375px) {
-        min-width: 3ch;
-
-        p {
-            font-size: 12px;
-        }
-    }
-`
+  }
+`;
 
 const Container = styled.header`
-    top: 0;
-`
-
-const HeaderLink = styled(Link)`
-    top: var(--nav-margin);
-`
-
-const LeftLink = styled(HeaderLink)`
-    left: var(--nav-margin);
-`
-
-const RightLink = styled(HeaderLink)`
-    right: var(--nav-margin);
-`
+  top: 0;
+`;
 
 export default Header;

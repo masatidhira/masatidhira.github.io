@@ -9,6 +9,7 @@ const HomePage = () => {
           <h1>
             <span>WEBSITE</span>
             <span>DEVELOPER</span>
+            <p>Based in Indonesia</p>
           </h1>
           <BannerImage></BannerImage>
           <h2>
@@ -31,7 +32,7 @@ const HomePage = () => {
             things to learn.
           </p>
           <p>
-            My dream is to become a website developer and create a attractive
+            My dream is to become a website developer and create an attractive
             and useful website for my client.
           </p>
           <p>
@@ -106,12 +107,14 @@ const HomePage = () => {
   );
 };
 
-const Container = styled.div`
+export const Container = styled.div`
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: var(--z-index-content);
 `;
 
 const BannerSection = styled.section`
@@ -138,10 +141,18 @@ const Banner = styled.div`
 
   h1 {
     font-family: var(--font-heading) !important;
-    font-size: 3.2rem;
-    line-height: 3rem;
     letter-spacing: 2px;
     margin: 2rem 0;
+
+    span {
+      font-size: 3.2rem;
+      margin-top: 1rem;
+    }
+
+    p {
+      font-size: 13px;
+      text-align: right;
+    }
   }
 
   h2 {

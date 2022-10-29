@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Container as HomeContainer } from "./HomePage";
 
 const ProjectPage = () => {
   return (
@@ -10,12 +11,7 @@ const ProjectPage = () => {
   );
 };
 
-const Container = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const Container = styled(HomeContainer)`
   justify-content: center;
 
   h1 {

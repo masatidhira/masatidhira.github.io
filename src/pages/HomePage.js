@@ -223,6 +223,10 @@ const Skills = styled.div`
     font-size: var(--fs-reguler);
     margin-bottom: 0.8rem;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Services = styled(Skills)``;

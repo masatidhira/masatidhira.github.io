@@ -15,8 +15,6 @@ const Chatbox = () => {
   const isOpen = useSelector((state) => state.chatbox.isOpen);
   const dispatch = useDispatch();
 
-  console.log(isOpen);
-
   return (
     <ChatboxContainer isOpen={isOpen}>
       <ChatboxHeader>

@@ -50,6 +50,10 @@ const GlobalStyle = createGlobalStyle`
         --z-index-nav: 100;
     }
 
+    li {
+        list-style: none;
+    }
+
     a {
         text-decoration: none;
         color: var(--text-color-1);

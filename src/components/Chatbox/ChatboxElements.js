@@ -16,7 +16,7 @@ export const ChatboxHeader = styled.div`
   display: flex;
   align-items: center;
   padding: 0 1rem;
-  background-color: blue;
+  background-color: royalblue;
 `;
 
 export const ProfileImage = styled.img`

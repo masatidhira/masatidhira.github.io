@@ -2,12 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import {
   BannerHeading,
-  BannerHeading2,
+  BannerName,
   SectionTitle,
   SectionParagraph,
 } from "../components/TextField";
 
 const HomePage = () => {
+  const profileText = [
+    "My name is Atidhira Habibillah, currently a student of Informatic Engineering from Indonesia.",
+    "I love to code. I've start my journey of learning to code since 2021, but i can't say that i'm an expert yet, i still have a lot of things to learn.",
+    "My dream is to become a website developer and create an attractive and useful website for my client.",
+    "If you need my help, or just want to say hi, feel free to contact me :)",
+  ];
   const skills = ["HTML5", "CSS/SASS", "Javascript", "React", "Figma"];
   const services = [
     "Website Development",
@@ -29,38 +35,26 @@ const HomePage = () => {
     <Container>
       <BannerSection>
         <Banner>
-          <BannerHeading>
-            <span>WEBSITE</span>
-            <span>DEVELOPER</span>
-          </BannerHeading>
-          <BannerImage></BannerImage>
-          <BannerHeading2>
-            <span>Atidhira</span>
-            <span>Habibillah</span>
-          </BannerHeading2>
-          <ScrollIcon>scroll down</ScrollIcon>
+          <BannerHeadingContainer>
+            <BannerHeading opacity="1">PORTFOLIO</BannerHeading>
+            <BannerHeading opacity="0.7">PORTFOLIO</BannerHeading>
+            <BannerHeading opacity="0.5">PORTFOLIO</BannerHeading>
+            <BannerHeading opacity="0.3">PORTFOLIO</BannerHeading>
+          </BannerHeadingContainer>
+          <BannerImageContainer>
+            <BannerImage />
+          </BannerImageContainer>
+          <BannerNameContainer>
+            <BannerName>Atidhira</BannerName>
+          </BannerNameContainer>
         </Banner>
       </BannerSection>
       <BioSection>
         <Profile>
           <SectionTitle>Hello!</SectionTitle>
-          <SectionParagraph>
-            My name is Atidhira Habibillah, currently a student of Informatic
-            Engineering from Indonesia.
-          </SectionParagraph>
-          <SectionParagraph>
-            I love to code. I've start my journey of learning to code since
-            2021, but i can't say that i'm an expert yet, i still have a lot of
-            things to learn.
-          </SectionParagraph>
-          <SectionParagraph>
-            My dream is to become a website developer and create an attractive
-            and useful website for my client.
-          </SectionParagraph>
-          <SectionParagraph>
-            If you need my help, or just want to say hi, feel free to contact me
-            :)
-          </SectionParagraph>
+          {profileText.map((text) => (
+            <SectionParagraph>{text}</SectionParagraph>
+          ))}
         </Profile>
         <Skills>
           <SectionTitle>Skills that i have</SectionTitle>
@@ -111,32 +105,22 @@ export const Container = styled.div`
   z-index: var(--z-index-content);
 `;
 
-const BannerSection = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: var(--nav-margin);
-`;
+const BannerSection = styled.section``;
 
 const Banner = styled.div`
   width: 100%;
-  height: 100%;
-  padding: 2rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  background: green;
+  height: 100vh;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const BannerImage = styled.div`
-  width: 65vw;
-  height: 80vh;
-  max-width: 325px;
-  max-height: 400px;
-  background-color: royalblue;
+const BannerHeadingContainer = styled.div`
+  position: absolute;
+`;
+
+const BannerImageContainer = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -144,14 +128,16 @@ const BannerImage = styled.div`
   z-index: 0;
 `;
 
-const ScrollIcon = styled.div`
-  width: 100%;
-  font-size: 0.6rem;
-  color: gray;
-  text-align: center;
+const BannerNameContainer = styled.div`
   position: absolute;
-  bottom: 12px;
-  left: 0;
+  transform: translateY(50px);
+`;
+
+const BannerImage = styled.img`
+  background-color: royalblue;
+  width: 100px;
+  height: 160px;
+  transform: rotate(15deg);
 `;
 
 const BioSection = styled.section`

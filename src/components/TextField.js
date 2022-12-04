@@ -2,25 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 export const BannerHeading = styled.h1`
-  display: flex;
-  flex-direction: column;
   font-family: var(--font-heading) !important;
   letter-spacing: 2px;
-
-  span {
-    font-size: 3.2rem;
-    text-align: center;
-  }
+  font-size: 3.2rem;
+  text-align: center;
+  opacity: ${(props) => props.opacity};
 `;
 
-export const BannerHeading2 = styled.h2`
-  display: flex;
-  flex-direction: column;
+export const BannerName = styled.p`
   font-family: var(--font-latin) !important;
   font-size: 1.5rem;
   letter-spacing: 3px;
-  line-height: 3rem;
-  text-align: right;
   transform: rotate(-20deg);
 `;
 

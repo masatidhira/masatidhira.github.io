@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "763eeb1e1b9c101a36a5",
-    "url": "/static/js/main.763eeb1e.chunk.js"
+    "revision": "42efc25d9261a1b20d46",
+    "url": "/static/js/main.42efc25d.chunk.js"
   },
   {
     "revision": "0ee655706643c89ff74b",
@@ -28,11 +28,11 @@ self.__precacheManifest = [
     "url": "/static/media/Brush-Flower.0614346e.otf"
   },
   {
-    "revision": "9546392290d661ddfb7eff8b0e533e38",
-    "url": "/static/media/LT-Remark-Bold-Italic.95463922.otf"
+    "revision": "67404fd1aa7412c33b3871c73d8971c1",
+    "url": "/static/media/ExtraordinaireDemoItalic.67404fd1.ttf"
   },
   {
-    "revision": "b19ede5f249ae6b634639a1ef97793ed",
+    "revision": "3e00d6ea2db5dac4cf2238165dca7bfe",
     "url": "/index.html"
   }
 ];

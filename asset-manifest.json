@@ -1,6 +1,6 @@
 {
-  "main.js": "/static/js/main.763eeb1e.chunk.js",
-  "main.js.map": "/static/js/main.763eeb1e.chunk.js.map",
+  "main.js": "/static/js/main.42efc25d.chunk.js",
+  "main.js.map": "/static/js/main.42efc25d.chunk.js.map",
   "static/js/1.0ee65570.chunk.js": "/static/js/1.0ee65570.chunk.js",
   "static/js/1.0ee65570.chunk.js.map": "/static/js/1.0ee65570.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
@@ -9,8 +9,8 @@
   "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.b3ba703c.ttf",
   "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3fe868a1.ttf",
   "static/media/Brush-Flower.otf": "/static/media/Brush-Flower.0614346e.otf",
-  "static/media/LT-Remark-Bold-Italic.otf": "/static/media/LT-Remark-Bold-Italic.95463922.otf",
+  "static/media/ExtraordinaireDemoItalic.ttf": "/static/media/ExtraordinaireDemoItalic.67404fd1.ttf",
   "index.html": "/index.html",
-  "precache-manifest.82414fdf2dc3b115eb91c53b79405063.js": "/precache-manifest.82414fdf2dc3b115eb91c53b79405063.js",
+  "precache-manifest.8bf097a9b60f47c26a04e27ae9eebb07.js": "/precache-manifest.8bf097a9b60f47c26a04e27ae9eebb07.js",
   "service-worker.js": "/service-worker.js"
 }

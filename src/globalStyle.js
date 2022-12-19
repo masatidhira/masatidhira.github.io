@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import montserratMedium from "./fonts/Montserrat/Montserrat-Medium.ttf";
 import montserratReguler from "./fonts/Montserrat/Montserrat-Regular.ttf";
 import brushFlower from "./fonts/Brush-Flower/Brush-Flower.otf";
-import itRemark from "./fonts/lt-remark/LT-Remark-Bold-Italic.otf";
+import extraordinair from "./fonts/extraordinair/ExtraordinaireDemoItalic.ttf";
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -22,8 +22,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
-        font-family: "ItRemark";
-        src: local("ItRemark"), url(${itRemark}) format("opentype");
+        font-family: "Extraordinair";
+        src: local("Extraordinair"), url(${extraordinair}) format("truetype");
     }
 
     * {
@@ -37,16 +37,16 @@ const GlobalStyle = createGlobalStyle`
         --text-color-1: #EEEEEE;
         --nav-margin: 7vw;
 
-        --font-heading: "ItRemark", serif;
+        --font-heading: "Extraordinair", serif;
         --font-text-medium: "MontserratMedium", sans-serif;
         --font-text-reguler: "MontserratReguler", sans-serif;
         --font-latin: "BrushFlower", sans-serif;
 
-        --fs-reguler: 13px;
-        --fs-medium: 1.8rem;
+        --fs-reguler: 0.8rem;
+        --fs-medium: 1.4rem;
 
-        --z-index-noise: 1;
-        --z-index-content: 2;
+        --z-index-noise: 10;
+        --z-index-content: 1;
         --z-index-nav: 100;
     }
 

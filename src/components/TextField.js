@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const BannerHeading = styled.h1`
   font-family: var(--font-heading) !important;
   letter-spacing: 2px;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   text-align: center;
   opacity: ${(props) => props.opacity};
 `;

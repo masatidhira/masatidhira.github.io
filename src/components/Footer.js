@@ -39,6 +39,7 @@ const ChatBox = styled.button`
   bottom: var(--nav-margin);
   right: var(--nav-margin);
   cursor: pointer;
+  transform: scale(-1, 1);
 `;
 
 const Credit = styled.div`

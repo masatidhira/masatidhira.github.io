@@ -36,10 +36,10 @@ const HomePage = () => {
       <BannerSection>
         <Banner>
           <BannerHeadingContainer>
-            <BannerHeading opacity="1">PORTFOLIO</BannerHeading>
-            <BannerHeading opacity="0.7">PORTFOLIO</BannerHeading>
-            <BannerHeading opacity="0.5">PORTFOLIO</BannerHeading>
-            <BannerHeading opacity="0.3">PORTFOLIO</BannerHeading>
+            <BannerHeading opacity="0.8">PORTFOLIO</BannerHeading>
+            <BannerHeading opacity="0.6">PORTFOLIO</BannerHeading>
+            <BannerHeading opacity="0.4">PORTFOLIO</BannerHeading>
+            <BannerHeading opacity="0.2">PORTFOLIO</BannerHeading>
           </BannerHeadingContainer>
           <BannerImageContainer>
             <BannerImage />
@@ -51,7 +51,7 @@ const HomePage = () => {
       </BannerSection>
       <BioSection>
         <Profile>
-          <SectionTitle>Hello!</SectionTitle>
+          <SectionTitle>Hello</SectionTitle>
           {profileText.map((text) => (
             <SectionParagraph>{text}</SectionParagraph>
           ))}
@@ -134,7 +134,7 @@ const BannerNameContainer = styled.div`
 `;
 
 const BannerImage = styled.img`
-  background-color: royalblue;
+  background-color: var(--background-color);
   width: 100px;
   height: 160px;
   transform: rotate(15deg);

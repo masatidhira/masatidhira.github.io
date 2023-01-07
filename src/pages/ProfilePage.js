@@ -6,60 +6,38 @@ import {
   SectionTitle,
   SectionParagraph,
 } from "../components/TextField";
+import data from "../database/ProfilepageData";
 
 const HomePage = () => {
-  const profileText = [
-    "My name is Atidhira Habibillah, currently a student of Informatic Engineering from Indonesia.",
-    "I love to code. I've start my journey of learning to code since 2021, but i can't say that i'm an expert yet, i still have a lot of things to learn.",
-    "My dream is to become a website developer and create an attractive and useful website for my client.",
-    "If you need my help, or just want to say hi, feel free to contact me :)",
-  ];
-  const skills = ["HTML5", "CSS/SASS", "Javascript", "React", "Figma"];
-  const services = [
-    "Website Development",
-    "Design to Website",
-    "Teach you to code",
-  ];
-  const contact = [
-    { href: "mailto:masatidhira@gmail.com", text: "Email" },
-    { href: "https://www.linkedin.com/in/masatidhira98/", text: "LinkedIn" },
-    { href: "https://github.com/masatidhira", text: "Github" },
-    { href: "https://www.instagram.com/masatidhira/", text: "Instagram" },
-    {
-      href: "https://api.whatsapp.com/send?phone=6281336284354",
-      text: "Whatsapp",
-    },
-  ];
-
   return (
     <Container>
       <BannerSection>
         <Banner>
           <BannerHeadingContainer>
-            <BannerHeading opacity="0.8">PORTFOLIO</BannerHeading>
-            <BannerHeading opacity="0.6">PORTFOLIO</BannerHeading>
-            <BannerHeading opacity="0.4">PORTFOLIO</BannerHeading>
-            <BannerHeading opacity="0.2">PORTFOLIO</BannerHeading>
+            <BannerHeading opacity="0.8">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading opacity="0.6">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading opacity="0.4">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading opacity="0.2">{data.bannerHeaderText}</BannerHeading>
           </BannerHeadingContainer>
           <BannerImageContainer>
             <BannerImage />
           </BannerImageContainer>
           <BannerNameContainer>
-            <BannerName>Atidhira</BannerName>
+            <BannerName>{data.bannerNameText}</BannerName>
           </BannerNameContainer>
         </Banner>
       </BannerSection>
       <BioSection>
         <Profile>
-          <SectionTitle>Hello</SectionTitle>
-          {profileText.map((text) => (
-            <SectionParagraph>{text}</SectionParagraph>
+          <SectionTitle>{data.introsHeading}</SectionTitle>
+          {data.intros.map((text, i) => (
+            <SectionParagraph key={i}>{text}</SectionParagraph>
           ))}
         </Profile>
         <Skills>
-          <SectionTitle>Skills that i have</SectionTitle>
+          <SectionTitle>{data.skillsHeading}</SectionTitle>
           <ul>
-            {skills.map((text, key) => (
+            {data.skills.map((text, key) => (
               <li key={key}>
                 <SectionParagraph>{text}</SectionParagraph>
               </li>
@@ -67,9 +45,9 @@ const HomePage = () => {
           </ul>
         </Skills>
         <Services>
-          <SectionTitle>Services that i offer</SectionTitle>
+          <SectionTitle>{data.servicesHeading}</SectionTitle>
           <ul>
-            {services.map((text, key) => (
+            {data.services.map((text, key) => (
               <li key={key}>
                 <SectionParagraph>{text}</SectionParagraph>
               </li>
@@ -77,9 +55,9 @@ const HomePage = () => {
           </ul>
         </Services>
         <Contact>
-          <SectionTitle>Get in touch</SectionTitle>
+          <SectionTitle>{data.contactsHeading}</SectionTitle>
           <ul>
-            {contact.map((obj, key) => (
+            {data.contacts.map((obj, key) => (
               <li key={key}>
                 <SectionParagraph>
                   <a href={obj.href} target="_blank" rel="noopener noreferrer">

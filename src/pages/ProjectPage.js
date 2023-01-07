@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Container as HomeContainer } from "./HomePage";
+import { Container as ProfileContainer } from "./ProfilePage";
 
 const ProjectPage = () => {
   return (
@@ -11,7 +11,7 @@ const ProjectPage = () => {
   );
 };
 
-const Container = styled(HomeContainer)`
+const Container = styled(ProfileContainer)`
   justify-content: center;
 
   h1 {

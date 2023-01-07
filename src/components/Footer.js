@@ -1,18 +1,11 @@
 import React from "react";
 import styled from "styled-components/macro";
-import { useDispatch } from "react-redux";
-import { SlBubble } from "react-icons/sl";
-import { openChatbox } from "../features/chatbox/chatboxSlice";
 import { baseContainer, baseNavButton } from "./Header";
 
 const Footer = () => {
-  const dispatch = useDispatch();
-
   return (
     <Container css={baseContainer}>
-      <ChatBox onClick={() => dispatch(openChatbox())}>
-        <SlBubble size={20} />
-      </ChatBox>
+      <ArrowUp>Arrow</ArrowUp>
       <Credit css={baseNavButton}>
         <p>
           <span>2</span>
@@ -31,7 +24,7 @@ const Container = styled.footer`
   bottom: 0;
 `;
 
-const ChatBox = styled.button`
+const ArrowUp = styled.button`
   background: none;
   border: none;
   position: fixed;
@@ -39,7 +32,6 @@ const ChatBox = styled.button`
   bottom: var(--nav-margin);
   right: var(--nav-margin);
   cursor: pointer;
-  transform: scale(-1, 1);
 `;
 
 const Credit = styled.div`

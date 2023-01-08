@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import montserratMedium from "./fonts/Montserrat/Montserrat-Medium.ttf";
 import montserratReguler from "./fonts/Montserrat/Montserrat-Regular.ttf";
 import brushFlower from "./fonts/Brush-Flower/Brush-Flower.otf";
-import extraordinair from "./fonts/extraordinair/ExtraordinaireDemoItalic.ttf";
+import saolDisplay from "./fonts/SaolDisplay/SaolDisplay-SemiboldItalic.ttf";
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -22,8 +22,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
-        font-family: "Extraordinair";
-        src: local("Extraordinair"), url(${extraordinair}) format("truetype");
+        font-family: "SaolDisplaySemiBoldItalic";
+        src: local("SaolDisplaySemiBoldItalic"), url(${saolDisplay}) format("truetype");
     }
 
     * {
@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
         --text-color-1: #EEEEEE;
         --nav-margin: 7vw;
 
-        --font-heading: "Extraordinair", serif;
+        --font-heading: "SaolDisplaySemiBoldItalic", serif;
         --font-text-medium: "MontserratMedium", sans-serif;
         --font-text-reguler: "MontserratReguler", sans-serif;
         --font-latin: "BrushFlower", sans-serif;

@@ -4,15 +4,14 @@ import styled from "styled-components";
 export const BannerHeading = styled.h1`
   font-family: var(--font-heading) !important;
   letter-spacing: 4px;
-  font-size: 2.6rem;
+  font-size: 3.4rem;
   text-align: center;
-  margin: 0.4rem 0;
   opacity: ${(props) => props.opacity};
 `;
 
 export const BannerName = styled.p`
   font-family: var(--font-latin) !important;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: 3px;
   transform: rotate(-15deg);
 `;
@@ -20,6 +19,7 @@ export const BannerName = styled.p`
 export const SectionTitle = styled.h3`
   font-family: var(--font-heading);
   font-size: var(--fs-medium);
+  letter-spacing: 1px;
   margin-bottom: 1rem;
 `;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import noisegif from "../images/noise1.gif";
+import noisegif from "../images/noise.gif";
 
 const NoiseLayer = () => {
   return (

@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "7f3b4a2ce60068aa4cfc",
-    "url": "/static/js/main.7f3b4a2c.chunk.js"
+    "revision": "96f0d92e391daf0736bf",
+    "url": "/static/js/main.96f0d92e.chunk.js"
   },
   {
     "revision": "8840f3c8b02ee6ebdc08",
@@ -13,7 +13,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "1384f2dfaf177439200b5dc575780043",
-    "url": "/static/media/noise1.1384f2df.gif"
+    "url": "/static/media/noise.1384f2df.gif"
   },
   {
     "revision": "b3ba703c591edd4aad57f8f4561a287b",
@@ -28,11 +28,11 @@ self.__precacheManifest = [
     "url": "/static/media/Brush-Flower.0614346e.otf"
   },
   {
-    "revision": "67404fd1aa7412c33b3871c73d8971c1",
-    "url": "/static/media/ExtraordinaireDemoItalic.67404fd1.ttf"
+    "revision": "f98aea1dfb3d1fc460660c5e4e4b9612",
+    "url": "/static/media/SaolDisplay-SemiboldItalic.f98aea1d.ttf"
   },
   {
-    "revision": "df583b4f4f84b7bcd4b91a63320f6b9b",
+    "revision": "a35dbcc1f0671d535696745237aa4fff",
     "url": "/index.html"
   }
 ];

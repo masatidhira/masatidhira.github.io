@@ -10,38 +10,53 @@ import {
 import data from "../database/ProfilepageData";
 
 const HomePage = () => {
-  const tl = gsap.timeline();
-  let [app, hd1, hd2, hd3, hd4, img, name] = Array(7).fill(useRef(null));
+  let [app, heading, img, name, profile, skills, services, contacts] = Array(8).fill(useRef(null));
 
   useEffect(() => {
     gsap.to(app, {duration: 0, css: {visibility: "visible"}});
 
-    gsap.from([hd1, hd2, hd3, hd4], {
-      y: 50,
+    // Heading animation
+    gsap.from(heading.children, {
+      y: "75%",
       opacity: 0,
       ease: Power3.easeOut,
       delay: 0.2,
       stagger: 0.2
     });
 
+    // Image and name animation
     gsap.from([img, name], {
-      y: -10,
+      y: "-20%",
       opacity: 0,
       ease: Power3.easeOut,
       delay: 1.2,
       stagger: 0.5
     })
+    console.log(profile.children[1])
+    // Profile animation
+    gsap.from(profile.children, {
+      scrollTrigger: {
+        trigger: profile.children[1],
+        start: "top 80%"
+      },
+      y: "75%",
+      opacity: 0,
+      ease: Power3.easeOut,
+      delay: 0.2,
+      stagger: 0.2
+    })
   }, [])
+
 
   return (
     <Container ref={elm => {app = elm}}>
       <BannerSection>
         <Banner>
-          <BannerHeadingContainer>
-            <BannerHeading ref={ elm => {hd1 = elm}} opacity="1">{data.bannerHeaderText}</BannerHeading>
-            <BannerHeading ref={ elm => {hd2 = elm}} opacity="0.7">{data.bannerHeaderText}</BannerHeading>
-            <BannerHeading ref={ elm => {hd3 = elm}} opacity="0.5">{data.bannerHeaderText}</BannerHeading>
-            <BannerHeading ref={ elm => {hd4 = elm}} opacity="0.3">{data.bannerHeaderText}</BannerHeading>
+          <BannerHeadingContainer ref={elm => {heading = elm}}>
+            <BannerHeading opacity="1">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading opacity="0.7">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading opacity="0.5">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading opacity="0.3">{data.bannerHeaderText}</BannerHeading>
           </BannerHeadingContainer>
           <BannerImageContainer ref={ elm => {img = elm}}>
             <BannerImage />
@@ -52,13 +67,13 @@ const HomePage = () => {
         </Banner>
       </BannerSection>
       <BioSection>
-        <Profile>
+        <Profile ref={elm => {profile = elm}}>
           <SectionTitle>{data.introsHeading}</SectionTitle>
           {data.intros.map((text, i) => (
             <SectionParagraph key={i}>{text}</SectionParagraph>
           ))}
         </Profile>
-        <Skills>
+        <Skills ref={elm => {skills = elm}}>
           <SectionTitle>{data.skillsHeading}</SectionTitle>
           <ul>
             {data.skills.map((text, key) => (
@@ -68,7 +83,7 @@ const HomePage = () => {
             ))}
           </ul>
         </Skills>
-        <Services>
+        <Services ref={elm => {services = elm}}>
           <SectionTitle>{data.servicesHeading}</SectionTitle>
           <ul>
             {data.services.map((text, key) => (
@@ -78,7 +93,7 @@ const HomePage = () => {
             ))}
           </ul>
         </Services>
-        <Contact>
+        <Contact ref={elm => {contacts = elm}}>
           <SectionTitle>{data.contactsHeading}</SectionTitle>
           <ul>
             {data.contacts.map((obj, key) => (

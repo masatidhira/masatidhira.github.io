@@ -1,5 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import React, {useRef, useEffect} from "react";
+import styled, { css } from "styled-components";
+import {gsap, Power3} from "gsap";
 import {
   BannerHeading,
   BannerName,
@@ -9,20 +10,43 @@ import {
 import data from "../database/ProfilepageData";
 
 const HomePage = () => {
+  const tl = gsap.timeline();
+  let [app, hd1, hd2, hd3, hd4, img, name] = Array(7).fill(useRef(null));
+
+  useEffect(() => {
+    gsap.to(app, {duration: 0, css: {visibility: "visible"}});
+
+    gsap.from([hd1, hd2, hd3, hd4], {
+      y: 50,
+      opacity: 0,
+      ease: Power3.easeOut,
+      delay: 0.2,
+      stagger: 0.2
+    });
+
+    gsap.from([img, name], {
+      y: -10,
+      opacity: 0,
+      ease: Power3.easeOut,
+      delay: 1.2,
+      stagger: 0.5
+    })
+  }, [])
+
   return (
-    <Container>
+    <Container ref={elm => {app = elm}}>
       <BannerSection>
         <Banner>
           <BannerHeadingContainer>
-            <BannerHeading opacity="0.8">{data.bannerHeaderText}</BannerHeading>
-            <BannerHeading opacity="0.6">{data.bannerHeaderText}</BannerHeading>
-            <BannerHeading opacity="0.4">{data.bannerHeaderText}</BannerHeading>
-            <BannerHeading opacity="0.2">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading ref={ elm => {hd1 = elm}} opacity="1">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading ref={ elm => {hd2 = elm}} opacity="0.7">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading ref={ elm => {hd3 = elm}} opacity="0.5">{data.bannerHeaderText}</BannerHeading>
+            <BannerHeading ref={ elm => {hd4 = elm}} opacity="0.3">{data.bannerHeaderText}</BannerHeading>
           </BannerHeadingContainer>
-          <BannerImageContainer>
+          <BannerImageContainer ref={ elm => {img = elm}}>
             <BannerImage />
           </BannerImageContainer>
-          <BannerNameContainer>
+          <BannerNameContainer ref={ elm => {name = elm}}>
             <BannerName>{data.bannerNameText}</BannerName>
           </BannerNameContainer>
         </Banner>
@@ -74,6 +98,7 @@ const HomePage = () => {
 };
 
 export const Container = styled.div`
+  visibility: none;
   width: 100%;
   min-height: 100vh;
   display: flex;

@@ -10,7 +10,7 @@ import GlobalStyle from "./globalStyle";
 const App = () => {
   return (
     <Router basename="/">
-      <GlobalStyle />
+      <GlobalStyle/>
       <NoiseLayer />
       <Header />
       <Routes>

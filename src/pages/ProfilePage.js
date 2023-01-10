@@ -1,6 +1,7 @@
-import React, {useRef, useEffect} from "react";
-import styled, { css } from "styled-components";
-import {gsap, Power3} from "gsap";
+import React, { useRef, useEffect } from "react";
+import styled from "styled-components";
+import { gsap, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   BannerHeading,
   BannerName,
@@ -10,10 +11,11 @@ import {
 import data from "../database/ProfilepageData";
 
 const HomePage = () => {
-  let [app, heading, img, name, profile, skills, services, contacts] = Array(8).fill(useRef(null));
+  gsap.registerPlugin(ScrollTrigger);
+  let [app, heading, img, name, bio] = Array(5).fill(useRef(null));
 
   useEffect(() => {
-    gsap.to(app, {duration: 0, css: {visibility: "visible"}});
+    gsap.to(app, { duration: 0, css: { visibility: "visible" } });
 
     // Heading animation
     gsap.from(heading.children, {
@@ -21,7 +23,7 @@ const HomePage = () => {
       opacity: 0,
       ease: Power3.easeOut,
       delay: 0.2,
-      stagger: 0.2
+      stagger: 0.2,
     });
 
     // Image and name animation
@@ -30,82 +32,88 @@ const HomePage = () => {
       opacity: 0,
       ease: Power3.easeOut,
       delay: 1.2,
-      stagger: 0.5
-    })
-    console.log(profile.children[1])
-    // Profile animation
-    gsap.from(profile.children, {
-      scrollTrigger: {
-        trigger: profile.children[1],
-        start: "top 80%"
-      },
-      y: "75%",
-      opacity: 0,
-      ease: Power3.easeOut,
-      delay: 0.2,
-      stagger: 0.2
-    })
-  }, [])
+      stagger: 0.5,
+    });
 
+    // Bio text animation
+    for (let el of bio.children) {
+      gsap.from(el.children, {
+        scrollTrigger: {
+          trigger: el.children[1],
+          start: "top 90%",
+        },
+        y: "50%",
+        opacity: 0,
+        ease: Power3.easeOut,
+        delay: 0.2,
+        stagger: 0.3,
+      });
+    }
+  }, []);
 
   return (
-    <Container ref={elm => {app = elm}}>
+    <Container
+      ref={(elm) => {
+        app = elm;
+      }}
+    >
       <BannerSection>
         <Banner>
-          <BannerHeadingContainer ref={elm => {heading = elm}}>
+          <BannerHeadingContainer
+            ref={(elm) => {
+              heading = elm;
+            }}
+          >
             <BannerHeading opacity="1">{data.bannerHeaderText}</BannerHeading>
             <BannerHeading opacity="0.7">{data.bannerHeaderText}</BannerHeading>
             <BannerHeading opacity="0.5">{data.bannerHeaderText}</BannerHeading>
             <BannerHeading opacity="0.3">{data.bannerHeaderText}</BannerHeading>
           </BannerHeadingContainer>
-          <BannerImageContainer ref={ elm => {img = elm}}>
+          <BannerImageContainer
+            ref={(elm) => {
+              img = elm;
+            }}
+          >
             <BannerImage />
           </BannerImageContainer>
-          <BannerNameContainer ref={ elm => {name = elm}}>
+          <BannerNameContainer
+            ref={(elm) => {
+              name = elm;
+            }}
+          >
             <BannerName>{data.bannerNameText}</BannerName>
           </BannerNameContainer>
         </Banner>
       </BannerSection>
-      <BioSection>
-        <Profile ref={elm => {profile = elm}}>
+      <BioSection ref={(elm) => (bio = elm)}>
+        <Profile>
           <SectionTitle>{data.introsHeading}</SectionTitle>
           {data.intros.map((text, i) => (
             <SectionParagraph key={i}>{text}</SectionParagraph>
           ))}
         </Profile>
-        <Skills ref={elm => {skills = elm}}>
+        <Skills>
           <SectionTitle>{data.skillsHeading}</SectionTitle>
-          <ul>
-            {data.skills.map((text, key) => (
-              <li key={key}>
-                <SectionParagraph>{text}</SectionParagraph>
-              </li>
-            ))}
-          </ul>
+          {data.skills.map((text, i) => (
+            <SectionParagraph key={i}>{text}</SectionParagraph>
+          ))}
         </Skills>
-        <Services ref={elm => {services = elm}}>
+        <Services>
           <SectionTitle>{data.servicesHeading}</SectionTitle>
-          <ul>
-            {data.services.map((text, key) => (
-              <li key={key}>
-                <SectionParagraph>{text}</SectionParagraph>
-              </li>
-            ))}
-          </ul>
+
+          {data.services.map((text, i) => (
+            <SectionParagraph key={i}>{text}</SectionParagraph>
+          ))}
         </Services>
-        <Contact ref={elm => {contacts = elm}}>
+        <Contact>
           <SectionTitle>{data.contactsHeading}</SectionTitle>
-          <ul>
-            {data.contacts.map((obj, key) => (
-              <li key={key}>
-                <SectionParagraph>
-                  <a href={obj.href} target="_blank" rel="noopener noreferrer">
-                    {obj.text}
-                  </a>
-                </SectionParagraph>
-              </li>
-            ))}
-          </ul>
+          {data.contacts.map((obj, i) => (
+            <SectionParagraph key={i}>
+              <a href={obj.href} target="_blank" rel="noopener noreferrer">
+                {obj.text}
+              </a>
+            </SectionParagraph>
+          ))}
         </Contact>
       </BioSection>
     </Container>

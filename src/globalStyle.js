@@ -1,8 +1,10 @@
 import { createGlobalStyle } from "styled-components";
-import montserratMedium from "./fonts/Montserrat/Montserrat-Medium.ttf";
-import montserratReguler from "./fonts/Montserrat/Montserrat-Regular.ttf";
-import brushFlower from "./fonts/Brush-Flower/Brush-Flower.otf";
-import saolDisplay from "./fonts/SaolDisplay/SaolDisplay-SemiboldItalic.ttf";
+
+const publicUrl = process.env.PUBLIC_URL;
+const montserratMedium = publicUrl + "/fonts/Montserrat-Medium.ttf";
+const montserratRegular = publicUrl + "/fonts/Montserrat-Regular.ttf";
+const brushFlower = publicUrl + "/fonts/Brush-Flower.otf";
+const saolDisplay = publicUrl + "/fonts/SaolDisplay-SemiboldItalic.ttf";
 
 const GlobalStyle = createGlobalStyle`
     @font-face {
@@ -11,8 +13,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
-        font-family: "MontserratReguler";
-        src: local("MontserratReguler"), url(${montserratReguler}) format("truetype");
+        font-family: "MontserratRegular";
+        src: local("MontserratRegular"), url(${montserratRegular}) format("truetype");
     }
 
     @font-face {
@@ -39,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
 
         --font-heading: "SaolDisplaySemiBoldItalic", serif;
         --font-text-medium: "MontserratMedium", sans-serif;
-        --font-text-reguler: "MontserratReguler", sans-serif;
+        --font-text-reguler: "MontserratRegular", sans-serif;
         --font-latin: "BrushFlower", sans-serif;
 
         --fs-reguler: 0.8rem;

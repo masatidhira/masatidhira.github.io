@@ -1,16 +1,12 @@
 {
-  "main.js": "/static/js/main.82e1db64.chunk.js",
-  "main.js.map": "/static/js/main.82e1db64.chunk.js.map",
-  "static/js/1.54d399ef.chunk.js": "/static/js/1.54d399ef.chunk.js",
-  "static/js/1.54d399ef.chunk.js.map": "/static/js/1.54d399ef.chunk.js.map",
+  "main.js": "/static/js/main.92010176.chunk.js",
+  "main.js.map": "/static/js/main.92010176.chunk.js.map",
+  "static/js/1.57f01a64.chunk.js": "/static/js/1.57f01a64.chunk.js",
+  "static/js/1.57f01a64.chunk.js.map": "/static/js/1.57f01a64.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
   "static/media/noise.gif": "/static/media/noise.1384f2df.gif",
-  "static/media/Montserrat-Medium.ttf": "/static/media/Montserrat-Medium.b3ba703c.ttf",
-  "static/media/Montserrat-Regular.ttf": "/static/media/Montserrat-Regular.3fe868a1.ttf",
-  "static/media/Brush-Flower.otf": "/static/media/Brush-Flower.0614346e.otf",
-  "static/media/SaolDisplay-SemiboldItalic.ttf": "/static/media/SaolDisplay-SemiboldItalic.f98aea1d.ttf",
   "index.html": "/index.html",
-  "precache-manifest.da863d56935918f1cbf953927e6b9996.js": "/precache-manifest.da863d56935918f1cbf953927e6b9996.js",
+  "precache-manifest.e942dc9f9cf6c4864ebb54202b0b0c88.js": "/precache-manifest.e942dc9f9cf6c4864ebb54202b0b0c88.js",
   "service-worker.js": "/service-worker.js"
 }

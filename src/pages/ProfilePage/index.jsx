@@ -1,5 +1,5 @@
-
-import { AuthorName, Container, Heading, HeadingWrapper, Hero, ImageWrapper, Profile, Section, Title, Text } from "./Components";
+import { AuthorName, Container, Heading, HeadingWrapper, Hero, ImageWrapper, Image, Profile, Section, Title, Text } from "./Components";
+import ImgProfile from "../../assets/images/img-profile.jpeg";
 
 const ProfilePage = () => {
     return(
@@ -12,7 +12,8 @@ const ProfilePage = () => {
                     <Heading>PROFILE</Heading>
                 </HeadingWrapper>
                 <ImageWrapper>
-                <AuthorName>Atidhira</AuthorName>
+                    <Image src={ImgProfile} />
+                    <AuthorName>Atidhira</AuthorName>
                 </ImageWrapper>
             </Hero>
             <Profile>

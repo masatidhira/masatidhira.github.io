@@ -28,9 +28,16 @@ export const Heading = styled.h1`
 export const ImageWrapper = styled.div`
     width: 100px;
     height: 140px;
-    background-color: blueviolet;
-    transform: rotate(15deg);
+    transform: rotate(10deg);
     position: absolute;
+`
+
+export const Image = styled.img`
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-semi-light);
+    object-fit: cover;
+    filter: grayscale(100%);
 `
 
 export const AuthorName = styled.h2`
@@ -38,7 +45,7 @@ export const AuthorName = styled.h2`
     font-size: min(6vw, 3rem);
     letter-spacing: 1px;
     position: absolute;
-    bottom: 0%;
+    bottom: 0;
     left: 50%;
     transform: rotate(-30deg) translateX(-50%);
 `

@@ -4,9 +4,11 @@ import App from './App'
 import './assets/fonts/Brush-Flower.otf'
 import './assets/fonts/SaolDisplay-SemiboldItalic.ttf'
 import './index.css'
+import NoiseLayer from './components/NoiseLayer'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <NoiseLayer />
     <App />
   </React.StrictMode>,
 )

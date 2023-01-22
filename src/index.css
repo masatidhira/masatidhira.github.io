@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "SaolDisplayItalic";
-  src: local("SaolDisplayItalic"), url(./assets/fonts/SaolDisplay-SemiboldItalic.ttf) format("truetype");
+  src: local("SaolDisplayItalic"), url(./assets/fonts/SaolDisplay-LightItalic.ttf) format("truetype");
 }
 
 :root {
@@ -67,4 +67,21 @@ button:focus-visible {
 
 #root {
   width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EEE6;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clr-light);
 }

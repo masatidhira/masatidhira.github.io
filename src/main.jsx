@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './assets/fonts/Brush-Flower.otf'
-import './assets/fonts/SaolDisplay-SemiboldItalic.ttf'
+import './assets/fonts/SaolDisplay-LightItalic.ttf'
 import './index.css'
 import NoiseLayer from './components/NoiseLayer'
 

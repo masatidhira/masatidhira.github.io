@@ -6,7 +6,7 @@ const ProfilePage = () => {
         <Container>
             <Hero>
                 <HeadingWrapper>
-                    <Heading>PROFILE</Heading>
+                    <Heading isTop={true}>PROFILE</Heading>
                     <Heading>PROFILE</Heading>
                     <Heading>PROFILE</Heading>
                     <Heading>PROFILE</Heading>

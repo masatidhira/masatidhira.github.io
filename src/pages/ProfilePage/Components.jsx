@@ -61,10 +61,18 @@ export const AuthorName = styled.h2`
     transform: rotate(-30deg) translateX(-50%);
 `
 
-export const Profile = styled(Hero)``
+export const Profile = styled.section`
+    width: 100%;
+    max-width: 768px;
+    min-height: 100vh;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+`
 
 export const Section = styled.section`
-    margin: 0 2rem;
+    margin: 0 3rem 3rem;
 `
 
 export const Title = styled.h3`

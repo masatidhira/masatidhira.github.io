@@ -1,37 +1,40 @@
 import { AuthorName, Container, Heading, HeadingWrapper, Hero, ImageWrapper, Image, Profile, Section, Title, Text } from "./Components";
-import ImgProfile from "../../assets/images/img-profile.jpeg";
+import ImgProfile from "../../assets/images/img-profile.jpeg"
+import Data from "./Data"
 
 const ProfilePage = () => {
     return(
         <Container>
             <Hero>
                 <HeadingWrapper>
-                    <Heading isTop={true}>PROFILE</Heading>
-                    <Heading>PROFILE</Heading>
-                    <Heading>PROFILE</Heading>
-                    <Heading>PROFILE</Heading>
+                    <Heading isTop={true}>{Data.headingText}</Heading>
+                    <Heading>{Data.headingText}</Heading>
+                    <Heading>{Data.headingText}</Heading>
+                    <Heading>{Data.headingText}</Heading>
                 </HeadingWrapper>
                 <ImageWrapper>
                     <Image src={ImgProfile} />
-                    <AuthorName>Atidhira</AuthorName>
+                    <AuthorName>{Data.authorName}</AuthorName>
                 </ImageWrapper>
             </Hero>
             <Profile>
                 <Section>
-                    <Title>Hello</Title>
-                    <Text></Text>
+                    <Title>{Data.introsTitle}</Title>
+                    {Data.intros.map((text, i) => <Text key={i}>{text}</Text>)}
                 </Section>
                 <Section>
-                    <Title>Skills</Title>
-                    <Text></Text>
+                    <Title>{Data.skillsTitle}</Title>
+                    {Data.skills.map((text, i) => <Text key={i}>{text}</Text>)}
                 </Section>
                 <Section>
-                    <Title>Services</Title>
-                    <Text></Text>
+                    <Title>{Data.servicesTitle}</Title>
+                    {Data.services.map((text, i) => <Text key={i}>{text}</Text>)}
                 </Section>
                 <Section>
-                    <Title>Get in touch</Title>
-                    <Text></Text>
+                    <Title>{Data.contactsTitle}</Title>
+                    {Data.contacts.map((obj, i) => (
+                        <Text key={i}><a href={obj.href}>{obj.text}</a></Text>
+                    ))}
                 </Section>
             </Profile>
         </Container>

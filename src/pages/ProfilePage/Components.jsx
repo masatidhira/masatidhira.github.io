@@ -63,9 +63,15 @@ export const AuthorName = styled.h2`
 
 export const Profile = styled(Hero)``
 
-export const Section = styled.section``
+export const Section = styled.section`
+    margin: 0 2rem;
+`
 
-export const Title = styled.h3``
+export const Title = styled.h3`
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+`
 
 export const Text = styled.p``
 

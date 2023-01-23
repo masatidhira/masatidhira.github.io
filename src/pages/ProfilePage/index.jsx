@@ -1,4 +1,4 @@
-import { AuthorName, Container, Heading, HeadingWrapper, Hero, ImageWrapper, Image, Profile, Section, Title, Text } from "./Components";
+import { AuthorName, Container, Heading, HeadingWrapper, Hero, ImageWrapper, Image, Profile, Section, Title, Text, ScrollDown } from "./Components";
 import ImgProfile from "../../assets/images/img-profile.jpeg"
 import Data from "./Data"
 
@@ -16,6 +16,7 @@ const ProfilePage = () => {
                     <Image src={ImgProfile} />
                     <AuthorName>{Data.authorName}</AuthorName>
                 </ImageWrapper>
+                <ScrollDown />
             </Hero>
             <Profile>
                 <Section>

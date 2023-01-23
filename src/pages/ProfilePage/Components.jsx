@@ -1,4 +1,10 @@
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
+
+const lineAnimation = keyframes`
+    0% { height: 100%; }
+    50% { height: 0%; }
+    100% { height: 0%; }
+`
 
 export const Container = styled.div`
     width: 100%;
@@ -61,6 +67,36 @@ export const AuthorName = styled.h2`
     transform: rotate(-30deg) translateX(-50%);
 `
 
+export const ScrollDown = styled.div`
+    background-color: var(--clr-light);
+    width: 1px;
+    height: 150px;
+    position: absolute;
+    bottom: -2rem;
+    opacity: 0.5;
+
+    ::before, ::after {
+        content: "";
+        width: 10px;
+        background-color: var(--clr-dark);
+        position: absolute;
+        left: -50%;
+        transform: translateX(-50%) rotate(180deg);
+        animation: ${lineAnimation} 2.5s linear infinite;
+    }
+
+    ::before {
+        height: 0;
+        bottom: 0;
+    }
+
+    ::after {
+        height: 100%;
+        top: 0;
+        animation-direction: reverse;
+    }
+`
+
 export const Profile = styled.section`
     width: 100%;
     max-width: 768px;
@@ -82,4 +118,3 @@ export const Title = styled.h3`
 `
 
 export const Text = styled.p``
-

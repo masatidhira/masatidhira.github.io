@@ -1,15 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App'
 import './assets/fonts/B612Mono-Regular.ttf'
 import './assets/fonts/Brush-Flower.otf'
 import './assets/fonts/SaolDisplay-LightItalic.ttf'
 import './index.css'
+import App from './App'
 import NoiseLayer from './components/NoiseLayer'
+import Navigation from './components/Navigation'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <NoiseLayer />
+    <Navigation />
     <App />
   </React.StrictMode>,
 )

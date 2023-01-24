@@ -14,6 +14,8 @@
 }
 
 :root {
+  --nav-height: 4rem;
+  
   --font-heading: "SaolDisplayItalic", sans-serif;
   --font-latin: "BrushFlower", cursive;
   --font-text: "B612Mono", monospace;

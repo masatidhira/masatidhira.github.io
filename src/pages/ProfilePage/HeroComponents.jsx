@@ -46,7 +46,7 @@ export const ImageWrapper = styled.div`
     @media (min-width: 768px) {
         width: 10rem;
         height: 14rem;
-    }
+    }   
 `
 
 export const Image = styled.img`
@@ -96,25 +96,3 @@ export const ScrollDown = styled.div`
         animation-direction: reverse;
     }
 `
-
-export const Profile = styled.section`
-    width: 100%;
-    max-width: 768px;
-    min-height: 100vh;
-    margin: 10vh auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-`
-
-export const Section = styled.section`
-    margin: 0 3rem 3rem;
-`
-
-export const Title = styled.h3`
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-`
-
-export const Text = styled.p``

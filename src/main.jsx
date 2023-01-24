@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
+import './assets/fonts/B612Mono-Regular.ttf'
 import './assets/fonts/Brush-Flower.otf'
 import './assets/fonts/SaolDisplay-LightItalic.ttf'
 import './index.css'

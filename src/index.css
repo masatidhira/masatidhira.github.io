@@ -1,4 +1,9 @@
 @font-face {
+  font-family: "B612Mono";
+  src: local("B612Mono"), url(./assets/fonts/B612Mono-Regular.ttf) format("truetype");
+}
+
+@font-face {
   font-family: "BrushFlower";
   src: local("BrushFlower"), url(./assets/fonts/Brush-Flower.otf) format("opentype");
 }
@@ -11,14 +16,15 @@
 :root {
   --font-heading: "SaolDisplayItalic", sans-serif;
   --font-latin: "BrushFlower", cursive;
+  --font-text: "B612Mono", monospace;
 
   --clr-dark: #0F0E0E;
   --clr-semi-dark: #541212;
   --clr-semi-light: #8B9A46;
   --clr-light: #EEEEEE;
 
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-family: var(--font-text);
+  font-size: 0.8rem;
   line-height: 24px;
   font-weight: 400;
   font-synthesis: none; 

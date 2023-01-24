@@ -3,6 +3,7 @@ import ImgProfile from "../../assets/images/img-profile.jpeg"
 import Data from "./Data"
 
 const ProfilePage = () => {
+    
     return(
         <Container>
             <Hero>

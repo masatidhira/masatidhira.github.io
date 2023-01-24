@@ -3,8 +3,7 @@ const profilePageData = {
     authorName: "Atidhira",
     introsTitle: "Hello",
     skillsTitle: "Skills that i have",
-    servicesTitle: "Services that i offer",
-    contactsTitle: "Get in touch",
+    contactsTitle: "Contact me",
     intros: [
         "My name is Atidhira Habibillah, currently a student of Informatic Engineering from Indonesia.",
         "I love coding. I have been learning to code since 2021, but i can't say that i'm an expert yet, i still have a lot of things to learn.",
@@ -12,16 +11,11 @@ const profilePageData = {
         "If you need my help, or just want to say hi, feel free to contact me :)",
     ],
     skills: ["HTML5", "CSS/SASS", "Javascript", "React", "Figma"],
-    services: ["Website Development", "Design to Website", "Teach you to code"],
     contacts: [
         { href: "mailto:masatidhira@gmail.com", text: "Email" },
         { href: "https://www.linkedin.com/in/masatidhira98/", text: "LinkedIn" },
         { href: "https://github.com/masatidhira", text: "Github" },
         { href: "https://www.instagram.com/masatidhira/", text: "Instagram" },
-        {
-        href: "https://api.whatsapp.com/send?phone=6281336284354",
-        text: "Whatsapp",
-        },
     ],
 };
   

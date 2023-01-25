@@ -10,7 +10,13 @@ const profilePageData = {
         "My dream is to become a website developer and create an attractive and useful website for my client around the world.",
         "If you need my help, or just want to say hi, feel free to contact me :)",
     ],
-    skills: ["HTML5", "CSS/SASS", "Javascript", "React", "Figma"],
+    skills: [
+        {text: "HTML5", scale: "90%"}, 
+        {text: "CSS/SASS", scale: "90%"}, 
+        {text: "Javascript", scale: "80%"}, 
+        {text: "React.js", scale: "80%"}, 
+        {text: "Figma", scale: "70%"},
+    ],
     contacts: [
         { href: "mailto:masatidhira@gmail.com", text: "Email" },
         { href: "https://www.linkedin.com/in/masatidhira98/", text: "LinkedIn" },

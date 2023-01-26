@@ -1,5 +1,5 @@
 import { Container, Heading, HeadingWrapper, Hero, ImageWrapper, Image, AuthorName, ScrollDown } from "./HeroComponents";
-import { AboutSection, BioSection, SkillSection, ContactSection, Title, Text, Scale } from "./AboutComponents";
+import { AboutSection, SummarySection, SkillSection, BioSection, Title, Scale, Contacts } from "./AboutComponents";
 import { Works } from "./WorksComponents"
 import ImgProfile from "../../assets/images/img-profile.jpeg"
 import Data from "./Data"
@@ -22,22 +22,25 @@ const ProfilePage = () => {
                 <ScrollDown />
             </Hero>
             <AboutSection id="about">
-                <BioSection>
-                    <Title>{Data.introsTitle}</Title>
-                    {Data.intros.map((text, i) => <Text key={i}>{text}</Text>)}
-                </BioSection>
+                <Title>{Data.aboutTitle[0]}<br />{Data.aboutTitle[1]}</Title>
+                <SummarySection>
+                    {Data.summary.map((array, i) => (
+                        <p key={i}><b>{array[0]}: </b>{array[1]}</p>
+                    ))}
+                    <Contacts>
+                        {Data.contacts.map((obj, i) => (
+                            <a key={i} href={obj.href}>{obj.text}</a>
+                        ))}
+                    </Contacts>
+                </SummarySection>
                 <SkillSection>
-                    <Title>{Data.skillsTitle}</Title>
                     {Data.skills.map((obj, i) => (
-                    <Scale key={i} scale={obj.scale}>{obj.text}</Scale>
+                        <Scale key={i} scale={obj.scale}>{obj.text}</Scale>
                     ))}
                 </SkillSection>
-                <ContactSection>
-                    <Title>{Data.contactsTitle}</Title>
-                    {Data.contacts.map((obj, i) => (
-                        <Text key={i}><a href={obj.href}>{obj.text}</a></Text>
-                    ))}
-                </ContactSection>
+                <BioSection>
+                    {Data.bio.map((text, i) => <p key={i}>{text}</p>)}
+                </BioSection>
             </AboutSection>
             <Works id="works">
 

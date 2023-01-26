@@ -1,21 +1,38 @@
 @font-face {
   font-family: "B612Mono";
-  src: local("B612Mono"), url(./assets/fonts/B612Mono-Regular.ttf) format("truetype");
+  src: url(./assets/fonts/B612Mono-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "B612Mono";
+  src: url(./assets/fonts/B612Mono-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-weight: bold;
 }
 
 @font-face {
   font-family: "BrushFlower";
-  src: local("BrushFlower"), url(./assets/fonts/Brush-Flower.otf) format("opentype");
+  src: url(./assets/fonts/Brush-Flower.otf) format("opentype");
 }
 
 @font-face {
   font-family: "SaolDisplayItalic";
-  src: local("SaolDisplayItalic"), url(./assets/fonts/SaolDisplay-LightItalic.ttf) format("truetype");
+  src: url(./assets/fonts/SaolDisplay-LightItalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SaolDisplayItalic";
+  src: url(./assets/fonts/SaolDisplay-SemiboldItalic.ttf) format("truetype");
+  font-style: italic;
+  font-weight: bold;
 }
 
 :root {
   --nav-height: 4rem;
-  
   --font-heading: "SaolDisplayItalic", sans-serif;
   --font-latin: "BrushFlower", cursive;
   --font-text: "B612Mono", monospace;
@@ -28,7 +45,6 @@
   font-family: var(--font-text);
   font-size: 0.8rem;
   line-height: 24px;
-  font-weight: 400;
   font-synthesis: none; 
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -63,7 +79,6 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;

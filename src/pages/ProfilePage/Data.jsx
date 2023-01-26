@@ -1,14 +1,16 @@
 const profilePageData = {
     headingText: "PROFILE",
     authorName: "Atidhira",
-    introsTitle: "Hello",
-    skillsTitle: "Skills that i have",
-    contactsTitle: "Contact me",
-    intros: [
-        "My name is Atidhira Habibillah, currently a student of Informatic Engineering from Indonesia.",
-        "I love coding. I have been learning to code since 2021, but i can't say that i'm an expert yet, i still have a lot of things to learn.",
-        "My dream is to become a website developer and create an attractive and useful website for my client around the world.",
-        "If you need my help, or just want to say hi, feel free to contact me :)",
+    aboutTitle: ["ABOUT", "ME"],
+    summary: [
+        ["Name", "Atidhira Habibillah"],
+        ["Birthdate", "07 June 1998"],
+        ["Status", "Undergraduate student"],
+        ["Lives in", "East Java, Indonesia"],
+    ],
+    bio: [
+        "Informatic Engineering student who spends his spare time learning about Programming, Web Development, and UI/UX design.",
+        "Dreamed of becoming a developer who create an attractive and useful apps for clients around the world."
     ],
     skills: [
         {text: "HTML5", scale: "90%"}, 

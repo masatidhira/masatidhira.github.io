@@ -26,6 +26,7 @@ export const Heading = styled.h1`
     color: ${prop => prop.isTop ? "var(--clr-light)" : "transparent"};
     font-family: var(--font-heading);
     font-size: min(18vw, 7rem);
+    font-weight: normal;
     letter-spacing: 5px;
     line-height: 0.5rem;
     opacity: ${prop => prop.isTop ? "1" : "0.5"};

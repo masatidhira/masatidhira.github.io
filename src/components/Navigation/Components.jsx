@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.nav`
+    background-color: var(--clr-dark);
     width: 100%;
     height: var(--nav-height);
     display: flex;

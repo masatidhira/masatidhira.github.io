@@ -1,6 +1,6 @@
 import { Container, Heading, HeadingWrapper, Hero, ImageWrapper, Image, AuthorName, ScrollDown } from "./HeroComponents";
 import { AboutSection, SummarySection, SkillSection, BioSection, Title, Scale, Contacts } from "./AboutComponents";
-import { Works } from "./WorksComponents"
+import { Card, WorkDate, WorkName, Works, WorkTag } from "./WorksComponents"
 import ImgProfile from "../../assets/images/img-profile.jpeg"
 import Data from "./Data"
 
@@ -43,7 +43,14 @@ const ProfilePage = () => {
                 </BioSection>
             </AboutSection>
             <Works id="works">
-
+                <Title>WORKS</Title>
+                {Data.works.map((work, i) => (
+                    <Card key={i}>
+                        <WorkDate>{work.date}</WorkDate>
+                        <WorkName>{work.name}</WorkName>
+                        <WorkTag>{work.tags.map(tag => "#" + tag + " ")}</WorkTag>    
+                    </Card>
+                ))}
             </Works>
         </Container>
     )

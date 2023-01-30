@@ -5,7 +5,7 @@ export const AboutSection = styled.section`
     max-width: 768px;
     min-height: 100vh;
     margin: var(--nav-height) auto;
-    padding: var(--nav-height) 3rem;
+    padding: var(--nav-height) 2rem;
     display: grid;
     grid-template-columns: 1fr;
     position: relative;
@@ -13,9 +13,10 @@ export const AboutSection = styled.section`
     @media (min-width: 720px) {
         grid-template-rows: auto 1fr;
         grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        gap: 3rem;
     }
 `
+
 export const Title = styled.h3`
     font-family: var(--font-heading);
     font-size: 4rem;

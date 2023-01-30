@@ -25,6 +25,13 @@ const profilePageData = {
         { href: "https://github.com/masatidhira", text: "Github" },
         { href: "https://www.instagram.com/masatidhira/", text: "Instagram" },
     ],
+    works: [
+        {date: "07 June 2021", name: "simple-sudoku", tags: ["react.js", "styled-components"]},
+        {date: "07 August 2021", name: "to-do-list", tags: ["react.js", "styled-components"]},
+        {date: "14 November 2021", name: "work 3", tags: ["react.js", "sass"]},
+        {date: "27 December 2021", name: "work 4", tags: ["lorem", "ipsum"]},
+        {date: "01 January 2022", name: "work 5", tags: ["ipsum", "lorem"]}
+    ]
 };
   
 export default profilePageData;  

@@ -25,7 +25,7 @@ export const HeadingWrapper = styled.div``
 export const Heading = styled.h1`
     color: ${prop => prop.isTop ? "var(--clr-light)" : "transparent"};
     font-family: var(--font-heading);
-    font-size: min(18vw, 7rem);
+    font-size: min(18vw, 10rem);
     font-weight: normal;
     letter-spacing: 5px;
     line-height: 0.5rem;
@@ -73,7 +73,7 @@ export const ScrollDown = styled.div`
     width: 1px;
     height: 150px;
     position: absolute;
-    bottom: -2rem;
+    bottom: -3rem;
     opacity: 0.5;
 
     ::before, ::after {

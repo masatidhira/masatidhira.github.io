@@ -1,4 +1,23 @@
 import styled, { keyframes } from "styled-components"
+import ImgProfile from "../../../assets/images/img-profile.jpeg"
+
+const HeroSection = ({id, profileData}) => {
+    return (
+        <Hero id={id}>
+            <HeadingWrapper>
+                <Heading isTop={true}>{profileData.headingText}</Heading>
+                <Heading>{profileData.headingText}</Heading>
+                <Heading>{profileData.headingText}</Heading>
+                <Heading>{profileData.headingText}</Heading>
+            </HeadingWrapper>
+            <ImageWrapper>
+                <Image src={ImgProfile} />
+                <AuthorName>{profileData.authorName}</AuthorName>
+            </ImageWrapper>
+            <ScrollDown />
+        </Hero>
+    )
+}
 
 const lineAnimation = keyframes`
     0% { height: 100%; }
@@ -6,11 +25,7 @@ const lineAnimation = keyframes`
     100% { height: 0%; }
 `
 
-export const Container = styled.div`
-    width: 100%;
-`
-
-export const Hero = styled.section`
+const Hero = styled.section`
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -20,37 +35,37 @@ export const Hero = styled.section`
     position: relative;
 `
 
-export const HeadingWrapper = styled.div``
+const HeadingWrapper = styled.div``
 
-export const Heading = styled.h1`
+const Heading = styled.h1`
     color: ${prop => prop.isTop ? "var(--clr-light)" : "transparent"};
     font-family: var(--font-heading);
-    font-size: min(18vw, 10rem);
+    font-size: min(20vw, 10rem);
     font-weight: normal;
     letter-spacing: 5px;
-    line-height: 0.5rem;
+    line-height: 0.8rem;
     opacity: ${prop => prop.isTop ? "1" : "0.5"};
     -webkit-text-stroke: 1px var(--clr-light);
 `
 
-export const ImageWrapper = styled.div`
-    width: 7rem;
-    height: 10rem;
+const ImageWrapper = styled.div`
+    width: 9rem;
+    height: 12rem;
     transform: rotate(10deg);
     position: absolute;
 
     @media (min-width: 480px) {
-        width: 9rem;
-        height: 12rem;
+        width: 11rem;
+        height: 14rem;
     }
 
     @media (min-width: 768px) {
-        width: 10rem;
-        height: 14rem;
+        width: 12rem;
+        height: 16rem;
     }   
 `
 
-export const Image = styled.img`
+const Image = styled.img`
     width: 100%;
     height: 100%;
     background-color: var(--clr-semi-light);
@@ -58,7 +73,7 @@ export const Image = styled.img`
     filter: grayscale(100%);
 `
 
-export const AuthorName = styled.h2`
+const AuthorName = styled.h2`
     font-family: var(--font-latin);
     font-size: min(6vw, 2.5rem);
     letter-spacing: 1px;
@@ -68,12 +83,12 @@ export const AuthorName = styled.h2`
     transform: rotate(-30deg) translateX(-50%);
 `
 
-export const ScrollDown = styled.div`
+const ScrollDown = styled.div`
     background-color: var(--clr-light);
     width: 1px;
     height: 150px;
     position: absolute;
-    bottom: -3rem;
+    bottom: -75px;
     opacity: 0.5;
 
     ::before, ::after {
@@ -97,3 +112,5 @@ export const ScrollDown = styled.div`
         animation-direction: reverse;
     }
 `
+
+export default HeroSection;

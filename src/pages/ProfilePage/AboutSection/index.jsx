@@ -1,6 +1,32 @@
 import styled from "styled-components"
 
-export const AboutSection = styled.section`
+const AboutSection = ({id, profileData}) => {
+    return (
+        <About id={id}>
+            <Title>{profileData.aboutTitle[0]}<br />{profileData.aboutTitle[1]}</Title>
+            <SummarySection>
+                {profileData.summary.map((array, i) => (
+                    <p key={i}><b>{array[0]}: </b>{array[1]}</p>
+                ))}
+                <Contacts>
+                    {profileData.contacts.map((obj, i) => (
+                        <a key={i} href={obj.href}>{obj.text}</a>
+                    ))}
+                </Contacts>
+            </SummarySection>
+            <SkillSection>
+                {profileData.skills.map((obj, i) => (
+                    <Scale key={i} scale={obj.scale}>{obj.text}</Scale>
+                ))}
+            </SkillSection>
+            <BioSection>
+                {profileData.bio.map((text, i) => <p key={i}>{text}</p>)}
+            </BioSection>
+        </About>
+    )
+}
+
+const About = styled.section`
     width: 100%;
     max-width: 768px;
     min-height: 100vh;
@@ -32,7 +58,7 @@ export const Title = styled.h3`
     }
 `
 
-export const SummarySection = styled.section`
+const SummarySection = styled.section`
     margin-bottom: 2rem;
     
     p {
@@ -45,7 +71,7 @@ export const SummarySection = styled.section`
     }
 `
 
-export const Contacts = styled.div`
+const Contacts = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,11 +81,12 @@ export const Contacts = styled.div`
         text-decoration: underline;
     }
 `
-export const SkillSection = styled.section`
+
+const SkillSection = styled.section`
     margin-bottom: 2rem;
 `
 
-export const Scale = styled.p`
+const Scale = styled.p`
     color: var(--clr-dark);
     padding: 0 1rem;
     border: 1px solid var(--clr-light);
@@ -84,7 +111,7 @@ export const Scale = styled.p`
     }
 `
 
-export const BioSection = styled.section`
+const BioSection = styled.section`
     margin-bottom: 2rem;
 
     p {
@@ -97,3 +124,5 @@ export const BioSection = styled.section`
     }
     
 `
+
+export default AboutSection;

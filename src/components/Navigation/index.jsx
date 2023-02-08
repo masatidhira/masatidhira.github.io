@@ -9,7 +9,7 @@ const Navigation = () => {
 
     return (
         <Container>
-            <NavItem href="#home" onClick={(event) => goToSection(event)}>HOME</NavItem>
+            <NavItem href="#hero" onClick={(event) => goToSection(event)}>HOME</NavItem>
             <NavItem href="#about" onClick={(event) => goToSection(event)}>ABOUT</NavItem>
             <NavItem href="#works" onClick={(event) => goToSection(event)}>WORKS</NavItem>
         </Container>

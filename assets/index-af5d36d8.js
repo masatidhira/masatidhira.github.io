@@ -273,4 +273,4 @@ Error generating stack: `+o.message+`
 `,si=oe.a`
     margin: 0 1rem;
     cursor: pointer;
-`,s0=()=>{const e=t=>{t.preventDefault(),document.querySelector(t.target.getAttribute("href")).scrollIntoView({behavior:"smooth"})};return We(u0,{children:[Y(si,{href:"#home",onClick:t=>e(t),children:"HOME"}),Y(si,{href:"#about",onClick:t=>e(t),children:"ABOUT"}),Y(si,{href:"#works",onClick:t=>e(t),children:"WORKS"})]})};ai.createRoot(document.getElementById("root")).render(We(Ir.StrictMode,{children:[Y(i0,{}),Y(s0,{}),Y(r0,{})]}));
+`,s0=()=>{const e=t=>{t.preventDefault(),document.querySelector(t.target.getAttribute("href")).scrollIntoView({behavior:"smooth"})};return We(u0,{children:[Y(si,{href:"#hero",onClick:t=>e(t),children:"HOME"}),Y(si,{href:"#about",onClick:t=>e(t),children:"ABOUT"}),Y(si,{href:"#works",onClick:t=>e(t),children:"WORKS"})]})};ai.createRoot(document.getElementById("root")).render(We(Ir.StrictMode,{children:[Y(i0,{}),Y(s0,{}),Y(r0,{})]}));

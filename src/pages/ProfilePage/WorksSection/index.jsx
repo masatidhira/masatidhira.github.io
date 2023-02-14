@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Title} from "../AboutSection"
+import {About as Works, Title} from "../AboutSection"
 
 const WorksSection = ({id, profileData}) => {
     return (
@@ -9,37 +9,23 @@ const WorksSection = ({id, profileData}) => {
                 <Card key={i}>
                     <WorkDate>{work.date}</WorkDate>
                     <WorkName>{work.name}</WorkName>
-                    <WorkTag>{work.tags.map(tag => "#" + tag + " ")}</WorkTag>    
+                    <WorkTag>{work.tags.map(tag => "#" + tag + " ")}</WorkTag>
+                    <WorkLink>Check project &gt;&gt;</WorkLink>
                 </Card>
             ))}
         </Works>
     )
 }
 
-const Works = styled.section`
-    width: 100%;
-    max-width: 768px;
-    min-height: 100vh;
-    margin: var(--nav-height) auto;
-    padding: var(--nav-height) 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    column-gap: 2rem;
-    position: relative;
-`
-
 const Card = styled.div`
     width: 100%;
     height: 10rem;
-    margin-bottom: 2rem;
-    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
     border: 1px solid var(--clr-light); 
-    cursor: pointer;
     transition: 0.2s;
-
-    &:hover {
-        border-color: var(--clr-semi-light);
-    }
+    position: relative;
 `
 
 const WorkDate = styled.p`
@@ -53,6 +39,15 @@ const WorkName = styled.p`
 
 const WorkTag = styled.p`
     font-size: 0.8rem;
+
+`
+
+const WorkLink = styled.a`
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: 0.4rem;
+    right: 0.8rem;
+    cursor: pointer;
 `
 
 export default WorksSection;

@@ -3,7 +3,10 @@ import styled from "styled-components"
 const AboutSection = ({id, profileData}) => {
     return (
         <About id={id}>
-            <Title>{profileData.aboutTitle[0]}<br />{profileData.aboutTitle[1]}</Title>
+            <Title>
+                <span>{profileData.aboutTitle[0]}</span>
+                <span>{profileData.aboutTitle[1]}</span>
+            </Title>
             <SummarySection>
                 {profileData.summary.map((array, i) => (
                     <p key={i}><b>{array[0]}: </b>{array[1]}</p>
@@ -14,11 +17,11 @@ const AboutSection = ({id, profileData}) => {
                     ))}
                 </Contacts>
             </SummarySection>
-            <SkillSection>
+            <SkillsList>
                 {profileData.skills.map((obj, i) => (
                     <Scale key={i} scale={obj.scale}>{obj.text}</Scale>
                 ))}
-            </SkillSection>
+            </SkillsList>
             <BioSection>
                 {profileData.bio.map((text, i) => <p key={i}>{text}</p>)}
             </BioSection>
@@ -26,14 +29,14 @@ const AboutSection = ({id, profileData}) => {
     )
 }
 
-const About = styled.section`
+export const About = styled.section`
     width: 100%;
     max-width: 768px;
-    min-height: 100vh;
     margin: var(--nav-height) auto;
     padding: var(--nav-height) 2rem;
     display: grid;
     grid-template-columns: 1fr;
+    row-gap: 2rem;
     position: relative;
 
     @media (min-width: 720px) {
@@ -44,30 +47,32 @@ const About = styled.section`
 `
 
 export const Title = styled.h3`
+    display: flex;
+    flex-direction: column;
     font-family: var(--font-heading);
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: 1px;
     line-height: normal;
     text-align: right;
-    margin-bottom: 0;
 
     @media (min-width: 720px) {
         height: fit-content;
-        margin-bottom: 0;
     }
 `
 
 const SummarySection = styled.section`
-    margin-bottom: 2rem;
-    
     p {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
     }
 
     @media (min-width: 720px) {
         height: fit-content;
-        margin-bottom: 0;
+
+        p {
+            margin-bottom: 0.8rem;
+        }
     }
 `
 
@@ -75,6 +80,7 @@ const Contacts = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1rem;
 
     a {
         font-size: 1rem;
@@ -82,13 +88,18 @@ const Contacts = styled.div`
     }
 `
 
-const SkillSection = styled.section`
-    margin-bottom: 2rem;
+const SkillsList = styled.ul`
+    margin-top: 1rem;
+    @media (min-width: 720px) {
+        margin-top: 0;
+    }
 `
 
-const Scale = styled.p`
+const Scale = styled.li`
+    list-style: none;
     color: var(--clr-dark);
-    padding: 0 1rem;
+    padding: 0.2rem 1rem;
+    margin-bottom: 1rem;
     border: 1px solid var(--clr-light);
     position: relative;
 
@@ -106,17 +117,17 @@ const Scale = styled.p`
     &:after {
         content: attr(scale);
         position: absolute;
-        top: 0;
+        top: 0.2rem;
         right: calc(100% - ${props => props.scale} + 1rem);
     }
 `
 
 const BioSection = styled.section`
-    margin-bottom: 2rem;
-
     p {
         font-size: 1.2rem;
+        margin-bottom: 1.5rem;
     }
+
     @media (min-width: 720px) {
         p {
             font-size: 1rem;

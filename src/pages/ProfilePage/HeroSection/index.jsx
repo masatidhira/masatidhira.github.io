@@ -27,7 +27,7 @@ const lineAnimation = keyframes`
 
 const Hero = styled.section`
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,14 +38,15 @@ const Hero = styled.section`
 const HeadingWrapper = styled.div``
 
 const Heading = styled.h1`
+    height: 1em;
     color: ${prop => prop.isTop ? "var(--clr-light)" : "transparent"};
     font-family: var(--font-heading);
-    font-size: min(20vw, 10rem);
+    font-size: min(20vw, 9rem);
     font-weight: normal;
     letter-spacing: 5px;
-    line-height: 0.8rem;
-    opacity: ${prop => prop.isTop ? "1" : "0.5"};
     -webkit-text-stroke: 1px var(--clr-light);
+    opacity: ${prop => prop.isTop ? "1" : "0.5"};
+    transform: translateY(50%);
 `
 
 const ImageWrapper = styled.div`

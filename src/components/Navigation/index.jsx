@@ -29,7 +29,7 @@ const Container = styled.nav`
     z-index: 99;
 `
 
-const NavItem = styled.a`
+export const NavItem = styled.a`
     margin: 0 1rem;
     cursor: pointer;
     position: relative;

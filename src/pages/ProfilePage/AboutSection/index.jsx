@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { NavItem } from "../../../components/Navigation"
 
 const AboutSection = ({id, profileData}) => {
     return (
@@ -13,7 +14,14 @@ const AboutSection = ({id, profileData}) => {
                 ))}
                 <Contacts>
                     {profileData.contacts.map((obj, i) => (
-                        <a key={i} href={obj.href}>{obj.text}</a>
+                        <Contact
+                            key={i}
+                            href={obj.href}
+                            target="_blank"
+                            data-text={obj.text}
+                        >
+                            {obj.text}
+                        </Contact>
                     ))}
                 </Contacts>
             </SummarySection>
@@ -32,8 +40,8 @@ const AboutSection = ({id, profileData}) => {
 export const About = styled.section`
     width: 100%;
     max-width: 768px;
-    margin: var(--nav-height) auto;
-    padding: var(--nav-height) 2rem;
+    margin: 0 auto;
+    padding: calc(var(--nav-height)*2) 2rem;
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 2rem;
@@ -80,12 +88,12 @@ const Contacts = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
+`
 
-    a {
-        font-size: 1rem;
-        text-decoration: underline;
-    }
+const Contact = styled(NavItem)`
+    margin: 0;
+    font-size: 1rem;
 `
 
 const SkillsList = styled.ul`
@@ -97,21 +105,21 @@ const SkillsList = styled.ul`
 
 const Scale = styled.li`
     list-style: none;
+    background-color: var(--clr-light);
     color: var(--clr-dark);
     padding: 0.2rem 1rem;
     margin-bottom: 1rem;
-    border: 1px solid var(--clr-light);
     position: relative;
 
     &:before {
         content: '';
-        background-color: var(--clr-light);
-        width: ${props => props.scale};
-        height: 100%;
+        background-color: var(--clr-dark);
+        width: calc(100% - ${props => props.scale} - 1px);
+        height: calc(100% - 2px);
         position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
+        top: 1px;
+        right: 1px;
+        z-index: 1;
     }
 
     &:after {

@@ -9,12 +9,12 @@ const HeroSection = ({id, profileData}) => {
                 <Heading>{profileData.headingText}</Heading>
                 <Heading>{profileData.headingText}</Heading>
                 <Heading>{profileData.headingText}</Heading>
+                <ScrollDown />
             </HeadingWrapper>
             <ImageWrapper>
                 <Image src={ImgProfile} />
                 <AuthorName>{profileData.authorName}</AuthorName>
             </ImageWrapper>
-            <ScrollDown />
         </Hero>
     )
 }
@@ -35,7 +35,9 @@ const Hero = styled.section`
     position: relative;
 `
 
-const HeadingWrapper = styled.div``
+const HeadingWrapper = styled.div`
+    position: relative;
+`
 
 const Heading = styled.h1`
     height: 1em;
@@ -87,10 +89,12 @@ const AuthorName = styled.h2`
 const ScrollDown = styled.div`
     background-color: var(--clr-light);
     width: 1px;
-    height: 150px;
-    position: absolute;
-    bottom: -75px;
+    height: 120px;
     opacity: 0.5;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(100%, 100%);
 
     ::before, ::after {
         content: "";

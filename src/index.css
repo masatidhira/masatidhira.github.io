@@ -1,42 +1,41 @@
 @font-face {
-  font-family: "B612Mono";
-  src: url(./assets/fonts/B612Mono-Regular.ttf) format("truetype");
+  font-family: 'B612Mono';
+  src: url(./assets/fonts/B612Mono-Regular.ttf) format('truetype');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "B612Mono";
-  src: url(./assets/fonts/B612Mono-Bold.ttf) format("truetype");
+  font-family: 'B612Mono';
+  src: url(./assets/fonts/B612Mono-Bold.ttf) format('truetype');
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
-  font-family: "BrushFlower";
-  src: url(./assets/fonts/Brush-Flower.otf) format("opentype");
+  font-family: 'BrushFlower';
+  src: url(./assets/fonts/Brush-Flower.otf) format('opentype');
 }
 
 @font-face {
-  font-family: "SaolDisplayItalic";
-  src: url(./assets/fonts/SaolDisplay-LightItalic.ttf) format("truetype");
+  font-family: 'SaolDisplayItalic';
+  src: url(./assets/fonts/SaolDisplay-LightItalic.ttf) format('truetype');
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face {
-  font-family: "SaolDisplayItalic";
-  src: url(./assets/fonts/SaolDisplay-SemiboldItalic.ttf) format("truetype");
+  font-family: 'SaolDisplayItalic';
+  src: url(./assets/fonts/SaolDisplay-SemiboldItalic.ttf) format('truetype');
   font-style: italic;
   font-weight: bold;
 }
 
 :root {
   --nav-height: 4rem;
-  --font-heading: "SaolDisplayItalic", sans-serif;
-  --font-latin: "BrushFlower", cursive;
-  --font-text: "B612Mono", monospace;
-
+  --font-heading: 'SaolDisplayItalic', sans-serif;
+  --font-latin: 'BrushFlower', cursive;
+  --font-text: 'B612Mono', monospace;
 
   --clr-dark: #2b2b2b;
   --clr-light: #fffefd;
@@ -44,12 +43,12 @@
   --clr-red: #f24941;
   --clr-blue: #2de1ec;
   --clr-semi-dark: #541212;
-  --clr-semi-light: #8B9A46;
+  --clr-semi-light: #8b9a46;
 
   font-family: var(--font-text);
   font-size: 0.8rem;
   line-height: 24px;
-  font-synthesis: none; 
+  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -110,7 +109,7 @@ button:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #EEE6;
+  background: #eee6;
   border-radius: 3px;
 }
 

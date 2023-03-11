@@ -1,7 +1,5 @@
-import {Container} from "./Components"
+import { Container } from './NoiseLayerElements';
 
-const NoiseLayer = () => {
-    return <Container />
+export default function NoiseLayer() {
+  return <Container />;
 }
-
-export default NoiseLayer;

@@ -77,7 +77,7 @@ Error generating stack: `+o.message+`
   left: 0;
   z-index: 99;
 `,kl=ne.a`
-  margin: 0 1rem;
+  margin: 0 2rem;
   cursor: pointer;
   position: relative;
 
@@ -184,7 +184,7 @@ Error generating stack: `+o.message+`
     top: 0;
     animation-direction: reverse;
   }
-`,Ym=""+new URL("img-profile-4d0fec54.jpeg",import.meta.url).href;function Km({id:e,profileData:t}){return We(Um,{id:e,children:[We(Bm,{children:[W(ul,{isTop:!0,children:t.headingText}),W(ul,{children:t.headingText}),W(ul,{children:t.headingText}),W(ul,{children:t.headingText}),W(Qm,{})]}),We(Hm,{children:[W(Vm,{src:Ym}),W(Wm,{children:t.authorName})]})]})}const rd=ne.section`
+`,Ym=""+new URL("img-profile-4d0fec54.jpeg",import.meta.url).href;function Km({id:e,profileData:t}){return We(Um,{id:e,children:[We(Bm,{children:[W(ul,{isTop:!0,children:t.headingText}),W(ul,{children:t.headingText}),W(ul,{children:t.headingText}),W(ul,{children:t.headingText}),W(Qm,{})]}),We(Hm,{children:[W(Vm,{src:Ym,loading:"lazy"}),W(Wm,{children:t.authorName})]})]})}const rd=ne.section`
   width: 100%;
   max-width: 768px;
   margin: 0 auto;

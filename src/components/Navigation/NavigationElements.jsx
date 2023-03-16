@@ -14,7 +14,7 @@ export const Container = styled.nav`
 `;
 
 export const NavItem = styled.a`
-  margin: 0 1rem;
+  margin: 0 2rem;
   cursor: pointer;
   position: relative;
 

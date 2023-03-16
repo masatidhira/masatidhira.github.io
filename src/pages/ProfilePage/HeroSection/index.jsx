@@ -20,7 +20,7 @@ export default function HeroSection({ id, profileData }) {
         <ScrollDown />
       </HeadingWrapper>
       <ImageWrapper>
-        <Image src={ImgProfile} />
+        <Image src={ImgProfile} loading="lazy" />
         <AuthorName>{profileData.authorName}</AuthorName>
       </ImageWrapper>
     </Hero>

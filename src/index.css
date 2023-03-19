@@ -1,32 +1,36 @@
 @font-face {
   font-family: 'B612Mono';
-  src: url(./assets/fonts/B612Mono-Regular.ttf) format('truetype');
+  src: local('B612Mono'),
+    url(./assets/fonts/B612Mono-Regular.woff) format('woff');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'B612Mono';
-  src: url(./assets/fonts/B612Mono-Bold.ttf) format('truetype');
+  src: local('B612Mono'), url(./assets/fonts/B612Mono-Bold.woff) format('woff');
   font-style: normal;
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'BrushFlower';
-  src: url(./assets/fonts/Brush-Flower.otf) format('opentype');
+  src: local('BrushFlower'),
+    url(./assets/fonts/Brush-Flower.woff) format('woff');
 }
 
 @font-face {
   font-family: 'SaolDisplayItalic';
-  src: url(./assets/fonts/SaolDisplay-LightItalic.ttf) format('truetype');
+  src: local('SaolDisplayItalic'),
+    url(./assets/fonts/SaolDisplay-LightItalic.woff) format('woff');
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'SaolDisplayItalic';
-  src: url(./assets/fonts/SaolDisplay-SemiboldItalic.ttf) format('truetype');
+  src: local('SaolDisplayItalic'),
+    url(./assets/fonts/SaolDisplay-SemiboldItalic.woff) format('woff');
   font-style: italic;
   font-weight: bold;
 }

@@ -49,6 +49,9 @@
   --clr-semi-dark: #541212;
   --clr-semi-light: #8b9a46;
 
+  --z-index-noise: 1000;
+  --z-index-loading: 500;
+
   font-family: var(--font-text);
   font-size: 0.8rem;
   line-height: 24px;

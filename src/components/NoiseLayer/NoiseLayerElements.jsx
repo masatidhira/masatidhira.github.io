@@ -9,6 +9,6 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: var(--z-index-noise);
   pointer-events: none;
 `;

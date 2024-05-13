@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import Data from './Data';
-import HeroSection from './HeroSection';
-import AboutSection from './AboutSection';
-import WorksSection from './WorksSection';
+import styled from "styled-components";
+import Data from "./Data";
+import HeroSection from "./HeroSection";
+import AboutSection from "./AboutSection";
+import WorksSection from "./WorksSection";
 
 export default function ProfilePage() {
   return (
